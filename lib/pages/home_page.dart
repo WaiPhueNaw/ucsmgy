@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucsmgy/pages/category_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -6,8 +7,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("ကျေးဇူးတင်ပါတယ် (Kyay-zu-tin-ba-deh)"),
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Center(child: Text(
+          "ကွန်ပျူတာတက္ကသိုလ်(မကွေး) "
+        )),
+      ),
+      body: Container(
+        child: ElevatedButton(onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (_){
+            return CategoryPage();
+          }));
+        }, child: Icon(Icons.category)),
       ),
     );
   }
