@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ucsmgy/pages/building_page.dart';
 import 'package:ucsmgy/pages/category_detail.dart';
 import 'package:ucsmgy/pages/headmaster.dart';
+import 'package:ucsmgy/pages/history.dart';
 import 'package:ucsmgy/pages/subINucsmgyF.dart';
 
 class CategoryPage extends StatelessWidget {
@@ -34,7 +36,7 @@ class CategoryPage extends StatelessWidget {
                   title: Text("နောက်ခံသမိုင်းကြောင်း"),
                   trailing: IconButton(onPressed: (){
                     Navigator.of(context).push(MaterialPageRoute(builder: (_){
-                      return CategoryDetail();
+                      return History();
                     }));
                   }, icon: Icon(Icons.arrow_forward_ios))
                 ),
@@ -56,10 +58,10 @@ class CategoryPage extends StatelessWidget {
                 Card(
                 child: ListTile(
                   leading: Icon(Icons.person),
-                  title: Text("နောက်ခံသမိုင်းကြောင်း"),
+                  title: Text("အဆောက်အဦးများ"),
                   trailing: IconButton(onPressed: (){
                     Navigator.of(context).push(MaterialPageRoute(builder: (_){
-                      return CategoryDetail();
+                      return BuildingPage();
                     }));
                   }, icon: Icon(Icons.arrow_forward_ios))
                 ),

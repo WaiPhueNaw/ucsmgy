@@ -27,7 +27,33 @@ class HeadmasterPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text("တာဝန်ထမ်းဆောင်ခဲ့ကြသောကျောင်းအုပ်ကြီး/ဒုတိယပါမောက္ခချုပ်များ", style: TextStyle(fontSize: 15),),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration:BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.cyan)
+                    
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 1, top: 10,bottom: 10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        
+                        Text("တာဝန်ထမ်းဆောင်ခဲ့သော",style: TextStyle(fontSize: 17,
+                        fontWeight: FontWeight.w300),),
+                        Row(
+                          
+                          children: [
+                            Text("ကျောင်းအုပ်ကြီး/ဒုတိယပါမောက္ခချုပ်များ",style: TextStyle(fontSize: 17,
+                            fontWeight: FontWeight.w300),),
+                          ],
+                        )
+                      ],
+                    ),
+                  )),
+              ),
               Card(
                 child: Row(
                   children: [

@@ -68,7 +68,18 @@ flutter:
     - assets/img/k4.png
     - assets/img/k5.jpg
     - assets/img/k6.jpg
-    - assets/img/k7.jpg           
+    - assets/img/k7.jpg
+    - assets/img/b1.jpg  
+    - assets/img/b2.jpg  
+    - assets/img/b3.jpg
+    - assets/img/b4.jpg
+    - assets/img/b5.jpg 
+    - assets/img/b6.jpg 
+    - assets/img/b7.jpg 
+    - assets/img/b8.jpg
+    - assets/img/g1.jpg  
+    - assets/img/g2.jpg  
+    - assets/img/boy.jpg            
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
