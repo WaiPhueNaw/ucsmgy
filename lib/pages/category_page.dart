@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ucsmgy/pages/category_detail.dart';
 import 'package:ucsmgy/pages/headmaster.dart';
+import 'package:ucsmgy/pages/project_show.dart';
 import 'package:ucsmgy/pages/subINucsmgyF.dart';
 
 class CategoryPage extends StatelessWidget {
@@ -80,10 +81,10 @@ class CategoryPage extends StatelessWidget {
                 Card(
                 child: ListTile(
                   leading: Icon(Icons.person),
-                  title: Text("နောက်ခံသမိုင်းကြောင်း"),
+                  title: Text("ICT Project Competition & Show"),
                   trailing: IconButton(onPressed: (){
                     Navigator.of(context).push(MaterialPageRoute(builder: (_){
-                      return CategoryDetail();
+                      return ProjectShowPage();
                     }));
                   }, icon: Icon(Icons.arrow_forward_ios))
                 ),

@@ -27,14 +27,40 @@ class HeadmasterPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text("တာဝန်ထမ်းဆောင်ခဲ့ကြသောကျောင်းအုပ်ကြီး/ဒုတိယပါမောက္ခချုပ်များ", style: TextStyle(fontSize: 15),),
+              Text(
+                "တာဝန်ထမ်းဆောင်ခဲ့ကြသောကျောင်းအုပ်ကြီး/ဒုတိယပါမောက္ခချုပ်များ",
+                style: TextStyle(fontSize: 15),
+              ),
+
               Card(
                 child: Row(
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Image.asset(
-                        "assets/img/k1.png",
+                        "assets/img/k7.jpg",
+                        height: 120,
+                        width: 120,
+                      ),
+                    ),
+                    SizedBox(width: 10.0),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [Text("ဒေါက်တာမျိုးမင်းသန်း"), Text("")],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              Card(
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
+                        "assets/img/k7.jpg",
                         height: 120,
                         width: 120,
                       ),
@@ -44,8 +70,80 @@ class HeadmasterPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: [
-                          Text("ဒေါ်အိအိထွန်း"),
-                          Text("(၁၄.၅.၂၀၀၀ -၂၀.၅.၂၀၀၁)"),
+                          Text("ဒေါက်တာစိုးလင်းအောင်"),
+                          Text("(၂၁.၆.၂၀၁၀ - ၂၀.၅.၂၀၂၄)"),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
+                        "assets/img/k6.jpg",
+                        height: 120,
+                        width: 120,
+                      ),
+                    ),
+                    SizedBox(width: 10.0),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text("ဒေါက်တာသန်းသန်းနွယ်"),
+                          Text("(၁၉.၁၂.၂၀၀၈ - ၂၀.၆.၂၀၁၀)"),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
+                        "assets/img/k5.jpg",
+                        height: 120,
+                        width: 120,
+                      ),
+                    ),
+                    SizedBox(width: 10.0),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text("ဒေါက်တာနန်းတွမ်ဟွမ်စော"),
+                          Text("(၃၁.၃.၂၀၀၈ - ၁၈.၁၂.၂၀၀၈)"),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
+                        "assets/img/k4.png",
+                        height: 120,
+                        width: 120,
+                      ),
+                    ),
+                    SizedBox(width: 10.0),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text("ဒေါက်တာစန်းစန်းတင့်"),
+                          Text("(၈.၁၀.၂၀၀၄ - ၃၁.၃.၂၀၀၈)"),
                         ],
                       ),
                     ),
@@ -106,7 +204,7 @@ class HeadmasterPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Image.asset(
-                        "assets/img/k4.png",
+                        "assets/img/k1.png",
                         height: 120,
                         width: 120,
                       ),
@@ -116,104 +214,8 @@ class HeadmasterPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: [
-                          Text("ဒေါက်တာစန်းစန်းတင့်"),
-                          Text("(၈.၁၀.၂၀၀၄ - ၃၁.၃.၂၀၀၈)"),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Card(
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Image.asset(
-                        "assets/img/k5.jpg",
-                        height: 120,
-                        width: 120,
-                      ),
-                    ),
-                    SizedBox(width: 10.0),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Text("ဒေါက်တာနန်းတွမ်ဟွမ်စော"),
-                          Text("(၃၁.၃.၂၀၀၈ - ၁၈.၁၂.၂၀၀၈)"),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Card(
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Image.asset(
-                        "assets/img/k6.jpg",
-                        height: 120,
-                        width: 120,
-                      ),
-                    ),
-                    SizedBox(width: 10.0),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Text("ဒေါက်တာသန်းသန်းနွယ်"),
-                          Text("(၁၉.၁၂.၂၀၀၈ - ၂၀.၆.၂၀၁၀)"),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Card(
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Image.asset(
-                        "assets/img/k7.jpg",
-                        height: 120,
-                        width: 120,
-                      ),
-                    ),
-                    SizedBox(width: 10.0),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Text("ဒေါက်တာစိုးလင်းအောင်"),
-                          Text("(၂၁.၆.၂၀၁၀ - ၂၀.၅.၂၀၂၄)"),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-               Card(
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Image.asset(
-                        "assets/img/k7.jpg",
-                        height: 120,
-                        width: 120,
-                      ),
-                    ),
-                    SizedBox(width: 10.0),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Text("ဒေါက်တာမျိုးမင်းသန်း"),
-                          Text(""),
+                          Text("ဒေါ်အိအိထွန်း"),
+                          Text("(၁၄.၅.၂၀၀၀ -၂၀.၅.၂၀၀၁)"),
                         ],
                       ),
                     ),

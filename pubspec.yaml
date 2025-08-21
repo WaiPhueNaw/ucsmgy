@@ -60,6 +60,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    
     - assets/img/uni.png
     - assets/img/uni_logo.jpg
     - assets/img/k1.png
@@ -68,7 +69,13 @@ flutter:
     - assets/img/k4.png
     - assets/img/k5.jpg
     - assets/img/k6.jpg
-    - assets/img/k7.jpg           
+    - assets/img/k7.jpg
+    - assets/img/fffirst.jpg
+    - assets/img/second.jpg
+    - assets/img/tthird.jpg
+    - assets/img/fourth_bigger.jpg
+    - assets/img/ffith.jpg
+
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
