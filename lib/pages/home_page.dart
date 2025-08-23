@@ -16,18 +16,24 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.cyan[400],
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset("assets/img/uni_logo.jpg", height: 30, width: 30),
-            SizedBox(width: 10),
-            Text("ကွန်ပျူတာတက္ကသိုလ်(မကွေး)", style: TextStyle(fontSize: 18.0)),
-            SizedBox(width: 10),
-            Image.asset("assets/img/uni_logo.jpg", height: 30, width: 30),
-          ],
-        ),
         centerTitle: true,
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Row(
+            children: [
+              Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
+              SizedBox(width: 10),
+              Text(
+                "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(width: 10),
+              Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
+            ],
+          ),
+        ),
       ),
       body: Container(
         width: double.infinity,
@@ -70,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                         right: 30.0,
                       ),
                       decoration: BoxDecoration(
-                        borderRadius:BorderRadius.circular(20.0),
+                        borderRadius: BorderRadius.circular(20.0),
                         color: Colors.cyanAccent,
                         border: Border.all(
                           color: Colors.cyan,
@@ -102,9 +108,7 @@ class _HomePageState extends State<HomePage> {
                   InkWell(
                     onTap: () {
                       Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const StudentPage(),
-                        ),
+                        MaterialPageRoute(builder: (context) => StudentPage()),
                       );
                     },
                     child: Card(
@@ -129,9 +133,7 @@ class _HomePageState extends State<HomePage> {
                   InkWell(
                     onTap: () {
                       Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const TeacherPage(),
-                        ),
+                        MaterialPageRoute(builder: (context) => TeacherPage()),
                       );
                     },
                     child: Card(

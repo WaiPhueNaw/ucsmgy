@@ -6,22 +6,25 @@ class FifthIctPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.cyan[400],
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset("assets/img/uni_logo.jpg", height: 30, width: 30),
-            SizedBox(width: 10),
-            Text(
-              "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(width: 10),
-            Image.asset("assets/img/uni_logo.jpg", height: 30, width: 30),
-          ],
-        ),
         centerTitle: true,
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Row(
+            children: [
+              Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
+              SizedBox(width: 10),
+              Text(
+                "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(width: 10),
+              Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
+            ],
+          ),
+        ),
       ),
       body: Container(
         width: double.infinity,
@@ -30,183 +33,183 @@ class FifthIctPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 12,
-                  ),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 12,
-                  ),
-                  decoration: BoxDecoration(
-                    color:
-                        Colors.white, // The background color of the container
-                    border: const Border(
-                      // Define the borders for the left, right, and bottom sides
-                      left: BorderSide(color: Colors.blue, width: 2),
-                      right: BorderSide(color: Colors.blue, width: 2),
-                      bottom: BorderSide(color: Colors.blue, width: 2),
-                    ),
-                    borderRadius: BorderRadius.circular(10.0),
-                    boxShadow: [
-                      const BoxShadow(
-                        color: Color.fromARGB(255, 227, 218, 140),
-                        offset: Offset(0, 1),
-                        blurRadius: 8,
-                        spreadRadius: 2,
-                      ),
-                      BoxShadow(
-                        color: Colors.cyan.withOpacity(
-                          0.3,
-                        ), // A semi-transparent purple color
-                        offset: const Offset(
-                          -4,
-                          4,
-                        ), // Shifts the shadow to the bottom-left
-                        blurRadius: 10,
-                        spreadRadius: 0,
-                      ),
-                    ],
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
-                        children: [
-                          const Text(
-                            'Project Show',
-                            style: TextStyle(
-                              fontSize: 17,
-                              //fontWeight: FontWeight.bold,
-                              color: Colors.black87,
-                            ),
-                          ),
-                          const Text(
-                        '(4)',
-                        style: TextStyle(
-                          fontSize: 17,
-                          //fontWeight: FontWeight.bold,
-                          color: Colors.cyan,
-                        ),
-                      ),
-                        ],
-                      ),
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(
+              //       horizontal: 10,
+              //       vertical: 12,
+              //     ),
+              //   child: Container(
+              //     padding: const EdgeInsets.symmetric(
+              //       horizontal: 10,
+              //       vertical: 12,
+              //     ),
+              //     decoration: BoxDecoration(
+              //       color:
+              //           Colors.white, // The background color of the container
+              //       border: const Border(
+              //         // Define the borders for the left, right, and bottom sides
+              //         left: BorderSide(color: Colors.blue, width: 2),
+              //         right: BorderSide(color: Colors.blue, width: 2),
+              //         bottom: BorderSide(color: Colors.blue, width: 2),
+              //       ),
+              //       borderRadius: BorderRadius.circular(10.0),
+              //       boxShadow: [
+              //         const BoxShadow(
+              //           color: Color.fromARGB(255, 227, 218, 140),
+              //           offset: Offset(0, 1),
+              //           blurRadius: 8,
+              //           spreadRadius: 2,
+              //         ),
+              //         BoxShadow(
+              //           color: Colors.cyan.withOpacity(
+              //             0.3,
+              //           ), // A semi-transparent purple color
+              //           offset: const Offset(
+              //             -4,
+              //             4,
+              //           ), // Shifts the shadow to the bottom-left
+              //           blurRadius: 10,
+              //           spreadRadius: 0,
+              //         ),
+              //       ],
+              //     ),
+              //     child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.center,
+              //       children: [
+              //         Column(
+              //           children: [
+              //             const Text(
+              //               'Project Show',
+              //               style: TextStyle(
+              //                 fontSize: 17,
+              //                 //fontWeight: FontWeight.bold,
+              //                 color: Colors.black87,
+              //               ),
+              //             ),
+              //             const Text(
+              //           '(4)',
+              //           style: TextStyle(
+              //             fontSize: 17,
+              //             //fontWeight: FontWeight.bold,
+              //             color: Colors.cyan,
+              //           ),
+              //         ),
+              //           ],
+              //         ),
                       
-                    ],
-                  ),
-                ),
-              ),
-              Card(
-                child: Table(
-                  columnWidths: <int, TableColumnWidth>{
-                  0: FlexColumnWidth(0.5), // First column takes 1 part of the flexible space
-                  1: FlexColumnWidth(2),
-                  2: FlexColumnWidth(1) // Second column takes 1 part of the flexible space
-                },
-                border: TableBorder(
-                  bottom: BorderSide(color: Colors.cyan, width: 1.0),
-                    verticalInside: BorderSide(color: Colors.blue, width: 1.0),
-                    horizontalInside: BorderSide(
-                      color: Colors.green,
-                      width: 1.0,
-                    ),
-                ),
-                children: [
-                  TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text(
-                            'No.',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text(
-                            'Project Title',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text(
-                            'Class',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('1.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Advanced Mushroom Cultivation'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Final year'),
-                        ),
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('2.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Automatic Floor Cleaning Robot'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Final year'),
-                        ),
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('3.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Smart Campus Infrastructure'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Final year'),
-                        ),
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('4.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('RFID Based Library Management Systems'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Final year'),
-                        ),
-                      ],
-                    ),
-                ],
+              //       ],
+              //     ),
+              //   ),
+              // ),
+              // Card(
+              //   child: Table(
+              //     columnWidths: <int, TableColumnWidth>{
+              //     0: FlexColumnWidth(0.5), // First column takes 1 part of the flexible space
+              //     1: FlexColumnWidth(2),
+              //     2: FlexColumnWidth(1) // Second column takes 1 part of the flexible space
+              //   },
+              //   border: TableBorder(
+              //     bottom: BorderSide(color: Colors.cyan, width: 1.0),
+              //       verticalInside: BorderSide(color: Colors.blue, width: 1.0),
+              //       horizontalInside: BorderSide(
+              //         color: Colors.green,
+              //         width: 1.0,
+              //       ),
+              //   ),
+              //   children: [
+              //     TableRow(
+              //         children: [
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text(
+              //               'No.',
+              //               style: TextStyle(fontWeight: FontWeight.bold),
+              //             ),
+              //           ),
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text(
+              //               'Project Title',
+              //               style: TextStyle(fontWeight: FontWeight.bold),
+              //             ),
+              //           ),
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text(
+              //               'Class',
+              //               style: TextStyle(fontWeight: FontWeight.bold),
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //       TableRow(
+              //         children: [
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('1.'),
+              //           ),
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('Advanced Mushroom Cultivation'),
+              //           ),
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('Final year'),
+              //           ),
+              //         ],
+              //       ),
+              //       TableRow(
+              //         children: [
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('2.'),
+              //           ),
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('Automatic Floor Cleaning Robot'),
+              //           ),
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('Final year'),
+              //           ),
+              //         ],
+              //       ),
+              //       TableRow(
+              //         children: [
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('3.'),
+              //           ),
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('Smart Campus Infrastructure'),
+              //           ),
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('Final year'),
+              //           ),
+              //         ],
+              //       ),
+              //       TableRow(
+              //         children: [
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('4.'),
+              //           ),
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('RFID Based Library Management Systems'),
+              //           ),
+              //           Padding(
+              //             padding: EdgeInsets.all(8.0),
+              //             child: Text('Final year'),
+              //           ),
+              //         ],
+              //       ),
+              //   ],
 
-                ),
-              ),
+              //   ),
+              // ),
               Padding(
                 padding: const EdgeInsets.symmetric(
                     horizontal: 10,

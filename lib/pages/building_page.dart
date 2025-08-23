@@ -16,11 +16,14 @@ class BuildingPage extends StatelessWidget {
     fit: BoxFit.scaleDown, // ✅ scales text/logos to fit
     child: Row(
       children: [
-        Image.asset("assets/img/uni_logo.jpg", height: 30, width: 30),
-        SizedBox(width: 10),
-        Text("ကွန်ပျူတာတက္ကသိုလ်(မကွေး)", style: TextStyle(fontSize: 18.0)),
-        SizedBox(width: 10),
-        Image.asset("assets/img/uni_logo.jpg", height: 30, width: 30),
+       Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
+              SizedBox(width: 10),
+              Text(
+                "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(width: 10),
+              Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
       ],
     ),
   ),

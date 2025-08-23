@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ucsmgy/pages/home_page.dart';
+import 'package:ucsmgy/pages/invitation_page.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      home: HomePage(),
+      home: InvitationPage(),
     )
   );
 }
@@ -13,7 +14,7 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomePage();
+    return InvitationPage();
   }
 }
 

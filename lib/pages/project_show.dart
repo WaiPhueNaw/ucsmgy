@@ -17,18 +17,24 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.cyan[400],
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset("assets/img/uni_logo.jpg", height: 30, width: 30),
-            SizedBox(width: 10),
-            Text("ကွန်ပျူတာတက္ကသိုလ်(မကွေး)", style: TextStyle(fontSize: 18.0)),
-            SizedBox(width: 10),
-            Image.asset("assets/img/uni_logo.jpg", height: 30, width: 30),
-          ],
-        ),
         centerTitle: true,
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Row(
+            children: [
+              Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
+              SizedBox(width: 10),
+              Text(
+                "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(width: 10),
+              Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
+            ],
+          ),
+        ),
       ),
       body: Container(
         width: double.infinity,
@@ -37,8 +43,6 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text("......................", style: TextStyle(fontSize: 15)),
-
               InkWell(
                 onTap: () {
                   Navigator.of(context).push(
@@ -62,18 +66,61 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          children: [Text("ICT Project Competition & Show"),
-                          Row(
-                            children: [
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                            ],
-                          ),
+                          children: [
+                            Text("ICT Project Competition & Show"),
+                            Row(
+                              children: [
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
@@ -105,18 +152,62 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          children: [Text("ICT Project Competition & Show"),
-                          Row(
-                            children: [
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                            ],
-                          ),],
+                          children: [
+                            Text("ICT Project Competition & Show"),
+                            Row(
+                              children: [
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ],
@@ -125,12 +216,12 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
               ),
               InkWell(
                 onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const ThirdIctPage(),
-                        ),
-                      );
-                    },
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const ThirdIctPage(),
+                    ),
+                  );
+                },
                 child: Card(
                   child: Row(
                     children: [
@@ -146,18 +237,62 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          children: [Text("ICT Project Competition & Show"),
-                          Row(
-                            children: [
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                            ],
-                          ),],
+                          children: [
+                            Text("ICT Project Competition & Show"),
+                            Row(
+                              children: [
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ],
@@ -166,12 +301,12 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
               ),
               InkWell(
                 onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const FourthIctPage(),
-                        ),
-                      );
-                    },
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const FourthIctPage(),
+                    ),
+                  );
+                },
                 child: Card(
                   child: Row(
                     children: [
@@ -187,18 +322,62 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          children: [Text("ICT Project Competition & Show"),
-                          Row(
-                            children: [
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                            ],
-                          ),],
+                          children: [
+                            Text("ICT Project Competition & Show"),
+                            Row(
+                              children: [
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ],
@@ -207,12 +386,12 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
               ),
               InkWell(
                 onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const FifthIctPage(),
-                        ),
-                      );
-                    },
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const FifthIctPage(),
+                    ),
+                  );
+                },
                 child: Card(
                   child: Row(
                     children: [
@@ -228,18 +407,62 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
-                          children: [Text("ICT Project Competition & Show"),
-                          Row(
-                            children: [
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Color(0xFFFFD700),),),
-                              Text(">", style: TextStyle(fontSize: 20.0,color: Colors.cyan),),
-                            ],
-                          ),],
+                          children: [
+                            Text("ICT Project Competition & Show"),
+                            Row(
+                              children: [
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Color(0xFFFFD700),
+                                  ),
+                                ),
+                                Text(
+                                  ">",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.cyan,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ],

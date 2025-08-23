@@ -1,0 +1,61 @@
+[33mcommit a121b31127b2bdd5c824f3b1185262fa623c31ea[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev_waiphuenaw[m[33m, [m[1;31morigin/dev_waiphuenaw[m[33m)[m
+Merge: 186ac14 2cc1ae0
+Author: WaiPhueNaw <waiphuenaw@gmail.com>
+Date:   Sat Aug 23 17:45:40 2025 +0630
+
+    Merge branch 'main' into your-current-branch to resolve conflicts
+
+[33mcommit 186ac14590336c5faf5653a9b75c1069bf1de611[m
+Author: WaiPhueNaw <waiphuenaw@gmail.com>
+Date:   Thu Aug 21 14:06:20 2025 +0630
+
+    update some pages
+
+[33mcommit 2cc1ae0f5f8b4d1dec18538ccf91ba0dd26d99df[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/dev_laelaetun[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mdev_laelaetun[m[33m)[m
+Author: laelaetun <laelaetun@gmail.com>
+Date:   Thu Aug 21 13:40:56 2025 +0630
+
+    change card
+
+[33mcommit bf364ec3886d71957913e277dccd1a464df2c4d0[m
+Author: laelaetun <laelaetun@gmail.com>
+Date:   Thu Aug 21 12:27:57 2025 +0630
+
+    building
+
+[33mcommit f541a8135930478e67c7abdc06016ef3ff017960[m
+Merge: 4b2985c 3247ebd
+Author: WaiPhueNaw <waiphuenaw@gmail.com>
+Date:   Wed Aug 20 09:59:18 2025 +0630
+
+    add some pages
+
+[33mcommit 4b2985cda1d0516625660ca137d82f129c76a8dc[m
+Author: WaiPhueNaw <waiphuenaw@gmail.com>
+Date:   Mon Aug 18 12:07:36 2025 +0630
+
+    home
+
+[33mcommit 3247ebdcfda2ff64b25c2d80666cbcefdc5e341a[m
+Author: laelaetun <laelaetun@gmail.com>
+Date:   Mon Aug 18 12:03:52 2025 +0630
+
+    category
+
+[33mcommit b8dcc643e527e9e940e97e7505e5b98285fba66c[m
+Author: WaiPhueNaw <waiphuenaw@gmail.com>
+Date:   Mon Aug 18 10:26:29 2025 +0630
+
+    wai
+
+[33mcommit c62a9d52291bb0ca5f95af8ec6467e657d75f733[m
+Author: WaiPhueNaw <waiphuenaw@gmail.com>
+Date:   Mon Aug 18 09:57:57 2025 +0630
+
+    Add folder
+
+[33mcommit 7fdb6617b0cc724fdfa119f3f479fc8df68b0d1e[m
+Author: WaiPhueNaw <waiphuenaw@gmail.com>
+Date:   Sun Aug 17 20:57:56 2025 +0630
+
+    first commit
