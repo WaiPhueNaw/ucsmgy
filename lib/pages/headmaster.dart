@@ -7,26 +7,25 @@ class HeadmasterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar(
-      automaticallyImplyLeading: false,
-  backgroundColor: Colors.cyan[400],
-  centerTitle: true,
-  title: FittedBox(
-    fit: BoxFit.scaleDown, 
-    child: Row(
-      children: [
-        Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
+        automaticallyImplyLeading: false,
+        backgroundColor: const Color.fromARGB(255, 45, 106, 113),
+        centerTitle: true,
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Row(
+            children: [
+              Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
               SizedBox(width: 10),
               Text(
                 "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               SizedBox(width: 10),
               Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
-      ],
-    ),
-  ),
-
-),
+            ],
+          ),
+        ),
+      ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -34,33 +33,48 @@ class HeadmasterPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  decoration:BoxDecoration(
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.cyan)
-                    
+                    border: Border.all(color: Colors.cyan),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 1, top: 10,bottom: 10),
-                    child: Column(
+                    padding: const EdgeInsets.only(
+                      left: 1,
+                      top: 10,
+                      bottom: 10,
+                    ),
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        
-                        Text("တာဝန်ထမ်းဆောင်ခဲ့သော",style: TextStyle(fontSize: 17,
-                        fontWeight: FontWeight.w300),),
-                        Row(
-                          
+                        Column(
                           children: [
-                            Text("ကျောင်းအုပ်ကြီး/ဒုတိယပါမောက္ခချုပ်များ",style: TextStyle(fontSize: 17,
-                            fontWeight: FontWeight.w300),),
+                            Text(
+                              "တာဝန်ထမ်းဆောင်ခဲ့သော",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w300,
+                              ),
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  "ကျောင်းအုပ်ကြီး/ဒုတိယပါမောက္ခချုပ်များ",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ],
-                        )
+                        ),
                       ],
                     ),
-                  )),
+                  ),
+                ),
               ),
               Card(
                 child: Row(

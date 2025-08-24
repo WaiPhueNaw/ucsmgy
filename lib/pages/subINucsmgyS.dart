@@ -8,26 +8,29 @@ class SubjectINucsmgyPageS extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-      automaticallyImplyLeading: false,
-  backgroundColor: Colors.cyan[400],
-  centerTitle: true,
-  title: FittedBox(
-    fit: BoxFit.scaleDown, 
-    child: Row(
-      children: [
-        Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
+        automaticallyImplyLeading: false,
+        backgroundColor: const Color.fromARGB(255, 45, 106, 113),
+        centerTitle: true,
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Row(
+            children: [
+              Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
               SizedBox(width: 10),
               Text(
                 "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
               SizedBox(width: 10),
               Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
-      ],
-    ),
-  ),
-
-),
+            ],
+          ),
+        ),
+      ),
       body: Column(
         children: [
           Row(
@@ -43,20 +46,20 @@ class SubjectINucsmgyPageS extends StatelessWidget {
                     ),
                   );
                 },
-                child: Text("ဘွဲ့ကြို"),
+                child: Text("ဘွဲ့ကြို", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400)),
               ),
 
               Container(
                 decoration: const BoxDecoration(
                   border: Border(
                     bottom: BorderSide(
-                      color: Colors.blue, // Choose your desired color
+                      color: Colors.cyan, // Choose your desired color
                       width: 2.0, // Choose your desired width
                     ),
                   ),
                 ),
                 padding: const EdgeInsets.all(8.0),
-                child: const Text("မဟာဘွဲ့"),
+                child: const Text("မဟာဘွဲ့", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400)),
               ),
             ],
           ),
@@ -66,6 +69,8 @@ class SubjectINucsmgyPageS extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Card(
+                elevation: 5,
+                shadowColor: Colors.cyan,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
                 ),
@@ -113,8 +118,11 @@ class SubjectINucsmgyPageS extends StatelessWidget {
               ),
               SizedBox(height: 30),
               Card(
+                elevation: 5,
+                shadowColor: Colors.cyan,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
+                  
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(

@@ -8,7 +8,7 @@ class FirstIctPage extends StatelessWidget {
     return Scaffold(
        appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.cyan[400],
+        backgroundColor: const Color.fromARGB(255, 45, 106, 113),
         centerTitle: true,
         title: FittedBox(
           fit: BoxFit.scaleDown,
@@ -18,7 +18,7 @@ class FirstIctPage extends StatelessWidget {
               SizedBox(width: 10),
               Text(
                 "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               SizedBox(width: 10),
               Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
@@ -88,7 +88,7 @@ class FirstIctPage extends StatelessWidget {
                             ),
                           ),
                            const Text(
-                        '(18)',
+                        '(25)',
                         style: TextStyle(
                           fontSize: 17,
                           //fontWeight: FontWeight.bold,
@@ -149,7 +149,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Voice Control Floor Cleaning Machine ')
+                          child: Text('Mini Smart House')
                         ),
                         
                       ],
@@ -163,7 +163,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Fingerprint Voting System'),
+                          child: Text('Automatic heat detector and Fan '),
                         ),
                         
                       ],
@@ -176,7 +176,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Smart Home'),
+                          child: Text('12VDC to AC Inventor'),
                         ),
                       
                       ],
@@ -189,7 +189,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Automatic Fire Fighting Robot System'),
+                          child: Text('Automatic Water Filling System'),
                         ),
                         
                       ],
@@ -202,7 +202,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('LCD Trainer Kit'),
+                          child: Text('GSM Based Home Security Alarm System'),
                         ),
                         
                       ],
@@ -215,7 +215,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('LED tube'),
+                          child: Text('PiKi'),
                         ),
                         
                       ],
@@ -228,7 +228,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Bluetooth Controlling car and measure distance'),
+                          child: Text('Model Traffic Light'),
                         ),
                         
                       ],
@@ -241,7 +241,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Object Detection'),
+                          child: Text('Natural Disasters Knowledge Sharing System'),
                         ),
                         
                       ],
@@ -254,7 +254,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Secure4U'),
+                          child: Text('Car Ticket Booking System'),
                         ),
                         
                       ],
@@ -267,7 +267,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('For Our Kids'),
+                          child: Text('Testing and Finding General Knowledge'),
                         ),
                         
                       ],
@@ -280,7 +280,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Diet for Health Care'),
+                          child: Text('Personal Expense Management System'),
                         ),
                        
                       ],
@@ -294,7 +294,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Canteen Talk Typist(CTT)'),
+                          child: Text('Travel Tour And Agency'),
                         ),
                         
                       ],
@@ -307,7 +307,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Our University'),
+                          child: Text('Our IT and Mobile Shop'),
                         ),
                         
                       ],
@@ -320,7 +320,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Online Student Registration System for  Computer Universities'),
+                          child: Text('The Famous Places in Myanmar'),
                         ),
                         
                       ],
@@ -333,7 +333,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Online Restaurant Reservation System'),
+                          child: Text('Hello Cinema'),
                         ),
                         
                       ],
@@ -346,7 +346,7 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Damma Download'),
+                          child: Text('Let\'s Read'),
                         ),
                         
                       ],
@@ -359,11 +359,118 @@ class FirstIctPage extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('POS'),
+                          child: Text('Motorcycles Installment Selling Center'),
                         ),
                         
                       ],
                     ),
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('18.'),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('AR OPNION'),
+                        ),
+                        
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('19.'),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('Online Bus Ticket Reservation System'),
+                        ),
+                        
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('20.'),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('Magway Transporation Bus Service (MTBS)'),
+                        ),
+                        
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('21.'),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('Library Management System'),
+                        ),
+                        
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('22.'),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('Happy Parent Happy Child (HPHC)'),
+                        ),
+                        
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('23.'),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('Online Books Center (OBC)'),
+                        ),
+                        
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('24.'),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('One More Scholarship System'),
+                        ),
+                        
+                      ],
+                    ),
+                      TableRow(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('25.'),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('Analysis of Data in Magway (ADM)'),
+                        ),
+                        
+                      ],
+                    ),
+
+                    
+                    
                      
                   ],
                 ),

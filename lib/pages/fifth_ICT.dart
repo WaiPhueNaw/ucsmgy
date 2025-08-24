@@ -8,7 +8,7 @@ class FifthIctPage extends StatelessWidget {
     return Scaffold(
        appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.cyan[400],
+        backgroundColor: const Color.fromARGB(255, 45, 106, 113),
         centerTitle: true,
         title: FittedBox(
           fit: BoxFit.scaleDown,
@@ -18,7 +18,7 @@ class FifthIctPage extends StatelessWidget {
               SizedBox(width: 10),
               Text(
                 "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               SizedBox(width: 10),
               Image.asset("assets/img/uni_logo.png", height: 40, width: 40),

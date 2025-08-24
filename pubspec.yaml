@@ -41,6 +41,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -48,6 +49,14 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.6
+  
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/img/25th_logo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -63,14 +72,22 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     
+    - assets/img/uni_crop.png
     - assets/img/uni.png
+    - assets/img/uni_enhanced.png
     - assets/img/uni_logo.png
     - assets/img/thapana_logo.png
     - assets/img/25th_logo.png
+    - assets/img/25th.png
     - assets/img/invite.png
     - assets/img/invitation.png
+    - assets/img/stafff.png
+    - assets/img/degree.png
+    - assets/img/stud.png
+    - assets/img/dd.png
     - assets/img/pp.png
     - assets/img/arrow.png
+    - assets/img/u.jpg
     - assets/img/k1.png
     - assets/img/k2.jpg
     - assets/img/k3.jpg
@@ -121,3 +138,19 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+#flutter pub run flutter_native_splash:create
+#flutter pub run flutter_native_splash:remove
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/img/25th.png
+  android_12:
+    color: "#FFFFFF"
+    image: assets/img/25th.png
+
+  android: true
+  ios: true
+  web: false
+  android_gravity: center
+
+  

@@ -8,7 +8,7 @@ class History extends StatelessWidget {
     return Scaffold(
      appBar: AppBar(
       automaticallyImplyLeading: false,
-  backgroundColor: Colors.cyan[400],
+  backgroundColor: const Color.fromARGB(255, 45, 106, 113),
   centerTitle: true,
   title: FittedBox(
     fit: BoxFit.scaleDown, // ✅ scales text/logos to fit
@@ -18,7 +18,7 @@ class History extends StatelessWidget {
               SizedBox(width: 10),
               Text(
                 "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               SizedBox(width: 10),
               Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
@@ -43,7 +43,7 @@ class History extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("နောက်ခံသမိုင်းကြောင်း",style: TextStyle(fontSize: 17,
+                  child: Text("နောက်ခံသမိုင်းကြောင်း",style: TextStyle(fontSize: 15,
                           fontWeight: FontWeight.w300),
                     
                   ),
@@ -55,12 +55,12 @@ class History extends StatelessWidget {
                     child: Container(
                       height: 50,
                       decoration: BoxDecoration(
-                        color:Colors.lightBlueAccent ,
+                        color:Colors.cyan[100] ,
                         border: Border.all(color: Colors.lightBlueAccent),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [Text("၄-၉-၂၀၀၀",style: TextStyle(color:Colors.white ),)],
+                        children: [Text("၄-၉-၂၀၀၀",style: TextStyle(color:Colors.black ),)],
                       ),
                     ),
                   ),
@@ -84,12 +84,12 @@ class History extends StatelessWidget {
                     child: Container(
                       height: 50,
                       decoration: BoxDecoration(
-                         color:Colors.lightBlueAccent ,
+                         color:Colors.cyan[100] ,
                         border: Border.all(color: Colors.lightBlueAccent),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [Text("၂၀-၁-၂၀၀၇",style: TextStyle(color:Colors.white ),)],
+                        children: [Text("၂၀-၁-၂၀၀၇",style: TextStyle(color:Colors.black),)],
                       ),
                     ),
                   ),
@@ -114,12 +114,12 @@ class History extends StatelessWidget {
                       
                       height: 50,
                       decoration: BoxDecoration(
-                        border: Border.all(color: Colors.lightBlueAccent),
-                         color:Colors.lightBlueAccent ,
+                        border: Border.all(color: Colors.cyan),
+                         color:Colors.cyan[100] ,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [Text("၂၃-၄-၂၀၁၃,",style: TextStyle(color:Colors.white ),)],
+                        children: [Text("၂၃-၄-၂၀၁၃,",style: TextStyle(color:Colors.black ),)],
                       ),
                     ),
                   ),
@@ -140,7 +140,7 @@ class History extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.calendar_today),SizedBox(width: 5,),
+                      Icon(Icons.calendar_today,color: const Color.fromARGB(255, 45, 106, 113),),SizedBox(width: 5,),
                       Text(
                         "တည်ထောင်သည့်ခုနှစ်",
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -160,7 +160,7 @@ class History extends StatelessWidget {
         
                   Row(
                     children: [
-                      Icon(Icons.location_on),SizedBox(width: 5,),
+                      Icon(Icons.location_on, color: const Color.fromARGB(255, 45, 106, 113),),SizedBox(width: 5,),
                       Text(
                         "တည်နေရာ",
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -182,7 +182,7 @@ class History extends StatelessWidget {
         
                 Row(
                     children: [
-                      Icon(Icons.square_foot),SizedBox(width: 5,),
+                      Icon(Icons.square_foot, color: const Color.fromARGB(255, 45, 106, 113),),SizedBox(width: 5,),
                       Text(
                         "အကျယ်အဝန်း",
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -210,7 +210,7 @@ class History extends StatelessWidget {
         
                   Row(
                     children: [
-                      Icon(Icons.history_edu),SizedBox(width: 5,),
+                      Icon(Icons.history_edu, color: const Color.fromARGB(255, 45, 106, 113),),SizedBox(width: 5,),
                       Text(
                         "နောက်ခံသမိုင်းကြောင်း",
                         style: TextStyle(fontWeight: FontWeight.bold),

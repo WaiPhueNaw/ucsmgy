@@ -8,17 +8,17 @@ class GirlstudentHostelPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.cyan[400],
+        backgroundColor: const Color.fromARGB(255, 45, 106, 113),
         centerTitle: true,
         title: FittedBox(
-          fit: BoxFit.scaleDown, // ✅ scales text/logos to fit
+          fit: BoxFit.scaleDown,
           child: Row(
             children: [
-Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
+              Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
               SizedBox(width: 10),
               Text(
                 "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               SizedBox(width: 10),
               Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
@@ -26,7 +26,6 @@ Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
           ),
         ),
       ),
-
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -38,10 +37,10 @@ Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
                   border: Border.all(color: Colors.cyan),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Text(
                     "ကျောင်းသူဆောင်များ",
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
                   ),
                 ),
               ),

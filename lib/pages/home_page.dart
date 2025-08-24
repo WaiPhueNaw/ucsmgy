@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ucsmgy/pages/category_page.dart';
 import 'package:ucsmgy/pages/course.dart';
 import 'package:ucsmgy/pages/student.dart';
-import 'package:ucsmgy/pages/teacher.dart';
+import 'package:ucsmgy/pages/graduate.dart';
+import 'package:ucsmgy/pages/teacherAnDstaff.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.cyan[400],
+        backgroundColor: const Color.fromARGB(255, 45, 106, 113),
         centerTitle: true,
         title: FittedBox(
           fit: BoxFit.scaleDown,
@@ -27,7 +28,11 @@ class _HomePageState extends State<HomePage> {
               SizedBox(width: 10),
               Text(
                 "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
               SizedBox(width: 10),
               Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
@@ -35,159 +40,172 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        child: Stack(
-          children: [
-            Positioned.fill(
-              top: 0,
-              child: Container(
-                child: Image.asset("assets/img/uni.png", fit: BoxFit.cover),
-              ),
-            ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildRoomOverviewCard(context),
+              const SizedBox(height: 20),
+              //_buildDeviceSectionHeader(),
+              const SizedBox(height: 10),
+              _buildDeviceGrid(),
+            ],
+          ),
+        ),
+      ),
+      //bottomNavigationBar: _buildBottomNavigationBar(),
+    );
+  }
 
-            // Positioned(
-            //   //top: 50,
-            //   child: Container(
-            //   child: Image.asset("assets/img/uni.png",fit:BoxFit.cover, ),
-            // )),
-            Positioned(
-              bottom: 200,
-              left: 50,
-              right: 50,
-              child: Column(
+  Widget _buildRoomOverviewCard(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: Card(
+        elevation: 4,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Stack(
                 children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return CategoryPage();
-                          },
-                        ),
-                      );
-                    },
-                    child: Container(
-                      padding: EdgeInsets.only(
-                        top: 10.0,
-                        left: 30.0,
-                        bottom: 10.0,
-                        right: 30.0,
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
-                        color: Colors.cyanAccent,
-                        border: Border.all(
-                          color: Colors.cyan,
-                          width: 2,
-                          style: BorderStyle.solid,
-                        ),
-                      ),
-                      child: Text(
-                        " ပိုမိုသိရှိရန် >>",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          //decoration: TextDecoration.underline
-                        ),
-                      ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'assets/img/uni.png',
+                      height: 210,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ],
               ),
-            ),
-            Positioned(
-              bottom: 15,
-              left: 5,
-              right: 5,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => StudentPage()),
-                      );
-                    },
-                    child: Card(
-                      elevation: 1,
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                          top: 10.0,
-                          left: 20.0,
-                          bottom: 10.0,
-                          right: 20.0,
-                        ),
-                        child: Column(
-                          children: [
-                            Icon(Icons.people),
-                            Text("222"),
-                            Text("+ student"),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => TeacherPage()),
-                      );
-                    },
-                    child: Card(
-                      elevation: 1,
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                          top: 10.0,
-                          left: 20.0,
-                          bottom: 10.0,
-                          right: 20.0,
-                        ),
-                        child: Column(
-                          children: [
-                            Icon(Icons.people),
-                            Text("222"),
-                            Text("+ student"),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const CoursePage(),
-                        ),
-                      );
-                    },
-                    child: Card(
-                      elevation: 1,
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                          top: 10.0,
-                          left: 20.0,
-                          bottom: 10.0,
-                          right: 20.0,
-                        ),
-                        child: Column(
-                          children: [
-                            Icon(Icons.people),
-                            Text("222"),
-                            Text("+ student"),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  // Widget _buildDeviceSectionHeader() {
+  //   return Padding(
+  //     padding: const EdgeInsets.symmetric(horizontal: 8.0),
+  //     child: Row(
+  //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //       children: [
+  //         const Text(
+  //           'Device',
+  //           style: TextStyle(
+  //             fontWeight: FontWeight.bold,
+  //             fontSize: 18,
+  //             color: Colors.black87,
+  //           ),
+  //         ),
+  //         ElevatedButton(
+  //           onPressed: () {
+  //             // Handle connect action
+  //           },
+  //           style: ElevatedButton.styleFrom(
+  //             backgroundColor: Colors.blueAccent,
+  //             shape: RoundedRectangleBorder(
+  //               borderRadius: BorderRadius.circular(10),
+  //             ),
+  //           ),
+  //           child: const Text(
+  //             '+ Connect',
+  //             style: TextStyle(color: Colors.white),
+  //           ),
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
+
+  Widget _buildDeviceGrid() {
+    return GridView.count(
+      crossAxisCount: 2,
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 10,
+      childAspectRatio: 0.9,
+      children: [
+        InkWell(
+          onTap: () {
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => TeacherandStaffPage()));
+          },
+          child: _buildDeviceCard('ဝန်ထမ်းအင်အား',Image.asset('assets/img/stafff.png',) ),
+        ),
+        InkWell(
+          onTap: () {
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => GraduatePage()));
+          },
+          child: _buildDeviceCard('ဘာသာရပ်အလိုက်၊ပညာသင်နှစ်အလိုက် မွေးထုတ်အင်အား',Image.asset('assets/img/degree.png',color: Colors.cyan,) ),
+        ),
+        InkWell(
+          onTap: () {
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => StudentPage()));
+          },
+          child: _buildDeviceCard('ကျောင်းသားအင်အား',Image.asset('assets/img/stud.png',) ),
+        ),
+        InkWell(
+          onTap: () {
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => CategoryPage()));
+          },
+          child: _buildDeviceCard('အသေးစိတ် သိရှိရန်',Image.asset('assets/img/dd.png',) ),
+        ),
+        // _buildDeviceCard('Speaker', Icon(Icons.home), ),
+        // _buildDeviceCard('Smart AC', Icon(Icons.home), ),
+        // _buildDeviceCard('Smart Lock', Icon(Icons.home),),
+      ],
+    );
+  }
+
+  Widget _buildDeviceCard(String title,Image deviceImage,) {
+    return Card(
+      elevation: 2,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(height: 70, child: deviceImage,),
+            //const SizedBox(height: 20),
+            Text(title, style: const TextStyle(fontSize: 13.0,fontWeight: FontWeight.w500)),
+            
           ],
         ),
       ),
     );
   }
+
+  // Widget _buildBottomNavigationBar() {
+  //   return BottomNavigationBar(
+  //     selectedItemColor: Colors.blueAccent,
+  //     unselectedItemColor: Colors.grey,
+  //     showSelectedLabels: false,
+  //     showUnselectedLabels: false,
+  //     items: const [
+  //       BottomNavigationBarItem(icon: Icon(Icons.cloud), label: 'Cloud'),
+  //       BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: 'Home'),
+  //       BottomNavigationBarItem(
+  //         icon: Icon(Icons.person_outline),
+  //         label: 'Profile',
+  //       ),
+  //     ],
+  //   );
+  // }
 }
