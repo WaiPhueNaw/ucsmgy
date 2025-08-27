@@ -5,6 +5,7 @@ import 'package:ucsmgy/pages/headmaster.dart';
 import 'package:ucsmgy/pages/library.dart';
 import 'package:ucsmgy/pages/project_show.dart';
 import 'package:ucsmgy/pages/history.dart';
+import 'package:ucsmgy/pages/student.dart';
 import 'package:ucsmgy/pages/subINucsmgyF.dart';
 
 class CategoryPage extends StatelessWidget {
@@ -49,7 +50,7 @@ class CategoryPage extends StatelessWidget {
                     child: Card(
                       child: ListTile(
                         leading: Icon(Icons.history_edu, color: const Color.fromARGB(255, 45, 106, 113),size: 28.0,),
-                        title: Text("နောက်ခံသမိုင်းကြောင်း", style: TextStyle(fontSize: 13.5),),
+                        title: Text("နောက်ခံသမိုင်းကြောင်း", style: TextStyle(fontSize: 13.0),),
                         trailing: IconButton(onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (_) {
                             return History();
@@ -64,7 +65,7 @@ class CategoryPage extends StatelessWidget {
                     child: Card(
                       child: ListTile(
                         leading: Icon(Icons.people_alt_outlined, color: const Color.fromARGB(255, 45, 106, 113),size: 28.0,),
-                        title: Text("တာဝန်ထမ်းဆောင်ခဲ့သောကျောင်းအုပ်ကြီး/ဒုတိယပါမောက္ခချုပ်များ", style: TextStyle(fontSize: 13.5)),
+                        title: Text("တာဝန်ထမ်းဆောင်ခဲ့သောကျောင်းအုပ်ကြီး/ဒုတိယပါမောက္ခချုပ်များ", style: TextStyle(fontSize: 13.0)),
                         trailing: IconButton(onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (_) {
                             return HeadmasterPage();
@@ -79,7 +80,7 @@ class CategoryPage extends StatelessWidget {
                     child: Card(
                       child: ListTile(
                         leading: Icon(Icons.account_balance,color: const Color.fromARGB(255, 45, 106, 113),size: 28.0,),
-                        title: Text("အဆောက်အဦးများ", style: TextStyle(fontSize: 13.5)),
+                        title: Text("အဆောက်အဦးများ", style: TextStyle(fontSize: 13.0)),
                         trailing: IconButton(onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (_) {
                             return BuildingPage();
@@ -94,7 +95,7 @@ class CategoryPage extends StatelessWidget {
                     child: Card(
                       child: ListTile(
                         leading: Icon(Icons.book_outlined,color: const Color.fromARGB(255, 45, 106, 113),size: 28.0,),
-                        title: Text("သင်ကြားပေးလျက်ရှိသော ဘာသာရပ်များ", style: TextStyle(fontSize: 13.5)),
+                        title: Text("သင်ကြားပေးလျက်ရှိသော ဘာသာရပ်များ", style: TextStyle(fontSize: 13.0)),
                         trailing: IconButton(onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (_) {
                             return SubjectinucsmgyPageF();
@@ -108,8 +109,22 @@ class CategoryPage extends StatelessWidget {
                     height: 95, // Set the height to a fixed value.
                     child: Card(
                       child: ListTile(
+                        leading: Icon(Icons.people_outline, color: const Color.fromARGB(255, 45, 106, 113),size: 28.0,),
+                        title: Text("ကျောင်းသားအင်အား", style: TextStyle(fontSize: 13.0)),
+                        trailing: IconButton(onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                            return StudentPage();
+                          }));
+                        }, icon: Icon(Icons.arrow_forward_ios)),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 95, // Set the height to a fixed value.
+                    child: Card(
+                      child: ListTile(
                         leading: Icon(Icons.book,color: const Color.fromARGB(255, 45, 106, 113),size: 28.0,),
-                        title: Text("စာကြည့်တိုက်ရှိစာအုပ်စာရင်း", style: TextStyle(fontSize: 13.5)),
+                        title: Text("စာကြည့်တိုက်ရှိစာအုပ်စာရင်း", style: TextStyle(fontSize: 13.0)),
                         trailing: IconButton(onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (_) {
                             return LibraryPage();
@@ -120,20 +135,7 @@ class CategoryPage extends StatelessWidget {
                   ),
                   
                   SizedBox(height: 10),
-                  SizedBox(
-                    height: 95, // Set the height to a fixed value.
-                    child: Card(
-                      child: ListTile(
-                        leading: Icon(Icons.padding, color: const Color.fromARGB(255, 45, 106, 113),size: 28.0,),
-                        title: Text("ICT Project Competition & Show", style: TextStyle(fontSize: 13.5)),
-                        trailing: IconButton(onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-                            return ProjectShowPage();
-                          }));
-                        }, icon: Icon(Icons.arrow_forward_ios)),
-                      ),
-                    ),
-                  ),
+                  
                   SizedBox(height: 10),
                 ],
               ),

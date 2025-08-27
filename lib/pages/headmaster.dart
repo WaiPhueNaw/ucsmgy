@@ -82,16 +82,16 @@ class HeadmasterPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Image.asset(
-                        "assets/img/k7.jpg",
+                        "assets/img/resized_drk.png",
                         height: 120,
-                        width: 120,
+                        width: 130,
                       ),
                     ),
                     SizedBox(width: 10.0),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
-                        children: [Text("ဒေါက်တာမျိုးမင်းသန်း"), Text("")],
+                        children: [Text("ဒေါက်တာမျိုးမင်းသန်း"), Text("(၂၁.၅.၂၀၂၄ - ယ‌‌‌နေ့ထိ)")],
                       ),
                     ),
                   ],

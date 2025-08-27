@@ -35,35 +35,42 @@ class StudentPage extends StatelessWidget {
     final List<BarChartGroupData> studentData = [
       BarChartGroupData(
         x: 0,
-        barRods: [BarChartRodData(toY: 190, color: itColor)],
+        barRods: [BarChartRodData(toY: 154, color: itColor)],
         showingTooltipIndicators: [0],
       ),
       BarChartGroupData(
         x: 1,
         barRods: [
-          BarChartRodData(toY: 86, color: csColor),
-          BarChartRodData(toY: 39, color: ctColor),
+          BarChartRodData(toY: 108, color: csColor),
+          BarChartRodData(toY: 46, color: ctColor),
         ],
       ),
       BarChartGroupData(
         x: 2,
         barRods: [
-          BarChartRodData(toY: 45, color: csColor),
-          BarChartRodData(toY: 17, color: ctColor),
+          BarChartRodData(toY: 146, color: csColor),
+          BarChartRodData(toY: 72, color: ctColor),
         ],
       ),
       BarChartGroupData(
         x: 3,
         barRods: [
-          BarChartRodData(toY: 63, color: csColor),
-          BarChartRodData(toY: 24, color: ctColor),
+          BarChartRodData(toY: 109, color: csColor),
+          BarChartRodData(toY: 46, color: ctColor),
         ],
       ),
       BarChartGroupData(
         x: 4,
         barRods: [
-          BarChartRodData(toY: 13, color: csColor),
-          BarChartRodData(toY: 1, color: ctColor),
+          BarChartRodData(toY: 74, color: csColor),
+          BarChartRodData(toY: 17, color: ctColor),
+        ],
+      ),
+      BarChartGroupData(
+        x: 5,
+        barRods: [
+          BarChartRodData(toY: 15, color: csColor),
+          BarChartRodData(toY: 3, color: ctColor),
         ],
       ),
     ];
@@ -90,6 +97,9 @@ class StudentPage extends StatelessWidget {
           text = 'စတုတ္ထနှစ်';
           break;
         case 4:
+          text = 'ပဥ္စမနှစ်';
+          break;
+          case 5:
           text = 'မဟာတန်း';
           break;
         default:
@@ -134,60 +144,66 @@ class StudentPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children:[ 
-            Container(
-                padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 14,
-                    ),
-                    decoration: BoxDecoration(
-                      color:
-                          Colors.white, // The background color of the container
-                      border: const Border(
-                        // Define the borders for the left, right, and bottom sides
-                        left: BorderSide(color: Colors.blue, width: 2),
-                        right: BorderSide(color: Colors.blue, width: 2),
-                        bottom: BorderSide(color: Colors.blue, width: 2),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                    horizontal: 4,
+                    vertical: 8,
+                  ),
+              child: Container(
+                  padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 14,
                       ),
-                      borderRadius: BorderRadius.circular(10.0),
-                      boxShadow: [
-                        const BoxShadow(
-                          color: Color.fromARGB(255, 227, 218, 140),
-                          offset: Offset(0, 1),
-                          blurRadius: 8,
-                          spreadRadius: 2,
+                      decoration: BoxDecoration(
+                        color:
+                            Colors.white, // The background color of the container
+                        border: const Border(
+                          // Define the borders for the left, right, and bottom sides
+                          left: BorderSide(color: Colors.blue, width: 2),
+                          right: BorderSide(color: Colors.blue, width: 2),
+                          bottom: BorderSide(color: Colors.blue, width: 2),
                         ),
-                        BoxShadow(
-                          color: Colors.cyan.withOpacity(
-                            0.3,
-                          ), // A semi-transparent purple color
-                          offset: const Offset(
-                            -4,
-                            4,
-                          ), // Shifts the shadow to the bottom-left
-                          blurRadius: 10,
-                          spreadRadius: 0,
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          children: [
-                            const Text(
-                              'ဘာသာရပ်အလိုက် ကျောင်းသား၊ကျောင်းသူ အင်အား ',
-                              style: TextStyle(
-                                fontSize: 14,
-                                //fontWeight: FontWeight.bold,
-                                color: Colors.black87,
+                        borderRadius: BorderRadius.circular(10.0),
+                        boxShadow: [
+                          const BoxShadow(
+                            color: Color.fromARGB(255, 227, 218, 140),
+                            offset: Offset(0, 1),
+                            blurRadius: 8,
+                            spreadRadius: 2,
+                          ),
+                          BoxShadow(
+                            color: Colors.cyan.withOpacity(
+                              0.3,
+                            ), // A semi-transparent purple color
+                            offset: const Offset(
+                              -4,
+                              4,
+                            ), // Shifts the shadow to the bottom-left
+                            blurRadius: 10,
+                            spreadRadius: 0,
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              const Text(
+                                'ဘာသာရပ်အလိုက် ကျောင်းသား၊ကျောင်းသူ အင်အား ',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  //fontWeight: FontWeight.bold,
+                                  color: Colors.black87,
+                                ),
                               ),
-                            ),
-                           
-                          ],
-                        ),
-                      ],
-                    ),
-              ),
+                             
+                            ],
+                          ),
+                        ],
+                      ),
+                ),
+            ),
             Padding(
             padding: const EdgeInsets.all(10.0),
             child: AspectRatio(

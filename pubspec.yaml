@@ -84,6 +84,8 @@ flutter:
     - assets/img/stafff.png
     - assets/img/degree.png
     - assets/img/stud.png
+    - assets/img/pjj.png
+    - assets/img/pj_show.png
     - assets/img/dd.png
     - assets/img/pp.png
     - assets/img/arrow.png
@@ -95,6 +97,8 @@ flutter:
     - assets/img/k5.jpg
     - assets/img/k6.jpg
     - assets/img/k7.jpg
+    - assets/img/drk.png
+    - assets/img/resized_drk.png
     - assets/img/fffirst.jpg
     - assets/img/second.jpg
     - assets/img/tthird.jpg

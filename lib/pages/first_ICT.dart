@@ -5,8 +5,41 @@ class FirstIctPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // List of all project titles.
+    final List<String> projectTitles = [
+      'Analysis of Data in Magway (ADM)',
+      'AR OPNION',
+      'Automatic heat detector and Fan',
+      'Automatic Water Filling System',
+      'Car Ticket Booking System',
+      'Hello Cinema',
+      'Happy Parent Happy Child (HPHC)',
+      'Library Management System',
+      'Let\'s Read',
+      'Mini Smart House',
+      'Motorcycles Installment Selling Center',
+      'Magway Transporation Bus Service (MTBS)',
+      'Model Traffic Light',
+      'Natural Disasters Knowledge Sharing System',
+      'Online Bus Ticket Reservation System',
+      'Online Books Center (OBC)',
+      'One More Scholarship System',
+      'Our IT and Mobile Shop',
+      'PiKi',
+      'Personal Expense Management System',
+      'Project Competition',
+      'Testing and Finding General Knowledge',
+      'Travel Tour And Agency',
+      'The Famous Places in Myanmar',
+      '12VDC to AC Inventor',
+    ];
+
+    // Sort the project titles in alphabetical order (A-Z).
+    // The sort() method modifies the list in-place.
+    projectTitles.sort();
+
     return Scaffold(
-       appBar: AppBar(
+      appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 45, 106, 113),
         centerTitle: true,
@@ -14,13 +47,14 @@ class FirstIctPage extends StatelessWidget {
           fit: BoxFit.scaleDown,
           child: Row(
             children: [
+              // Assuming you have these assets in your project
               Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
-              SizedBox(width: 10),
-              Text(
+              const SizedBox(width: 10),
+              const Text(
                 "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
                 style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white),
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
             ],
           ),
@@ -29,26 +63,22 @@ class FirstIctPage extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-
         child: SingleChildScrollView(
           child: Column(
             children: [
-              
               Padding(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 20,
-                  ),
+                  horizontal: 10,
+                  vertical: 20,
+                ),
                 child: Container(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 10,
                     vertical: 12,
                   ),
                   decoration: BoxDecoration(
-                    color:
-                        Colors.white, // The background color of the container
+                    color: Colors.white,
                     border: const Border(
-                      // Define the borders for the left, right, and bottom sides
                       left: BorderSide(color: Colors.blue, width: 2),
                       right: BorderSide(color: Colors.blue, width: 2),
                       bottom: BorderSide(color: Colors.blue, width: 2),
@@ -62,13 +92,8 @@ class FirstIctPage extends StatelessWidget {
                         spreadRadius: 2,
                       ),
                       BoxShadow(
-                        color: Colors.cyan.withOpacity(
-                          0.3,
-                        ), // A semi-transparent purple color
-                        offset: const Offset(
-                          -4,
-                          4,
-                        ), // Shifts the shadow to the bottom-left
+                        color: Colors.cyan.withOpacity(0.3),
+                        offset: const Offset(-4, 4),
                         blurRadius: 10,
                         spreadRadius: 0,
                       ),
@@ -83,35 +108,29 @@ class FirstIctPage extends StatelessWidget {
                             'Project Competition',
                             style: TextStyle(
                               fontSize: 17,
-                              //fontWeight: FontWeight.bold,
                               color: Colors.black87,
                             ),
                           ),
-                           const Text(
-                        '(25)',
-                        style: TextStyle(
-                          fontSize: 17,
-                          //fontWeight: FontWeight.bold,
-                          color: Colors.cyan,
-                        ),
-                      ),
+                          Text(
+                            '(${projectTitles.length})', // Dynamically show the count
+                            style: const TextStyle(
+                              fontSize: 17,
+                              color: Colors.cyan,
+                            ),
+                          ),
                         ],
                       ),
                     ],
                   ),
                 ),
               ),
-              //SizedBox(height: 10.0),
               Card(
                 child: Table(
-                  columnWidths: <int, TableColumnWidth>{
-                  0: FlexColumnWidth(0.5), // First column takes 1 part of the flexible space
-                  1: FlexColumnWidth(2),
-                  2: FlexColumnWidth(1) // Second column takes 1 part of the flexible space
-                },
-                  // Sets the border for each cell
-                  border: TableBorder(
-                    //top: BorderSide(color: Colors.red, width: 2.0),
+                  columnWidths: const <int, TableColumnWidth>{
+                    0: FlexColumnWidth(0.5),
+                    1: FlexColumnWidth(2),
+                  },
+                  border: const TableBorder(
                     bottom: BorderSide(color: Colors.cyan, width: 1.0),
                     verticalInside: BorderSide(color: Colors.blue, width: 1.0),
                     horizontalInside: BorderSide(
@@ -119,9 +138,9 @@ class FirstIctPage extends StatelessWidget {
                       width: 1.0,
                     ),
                   ),
-                  children: const [
-                    // First row
-                    TableRow(
+                  children: [
+                    // This is the header row, it remains static
+                    const TableRow(
                       children: [
                         Padding(
                           padding: EdgeInsets.all(8.0),
@@ -137,347 +156,29 @@ class FirstIctPage extends StatelessWidget {
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
-                        
                       ],
                     ),
-                    // Second row
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('1.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Mini Smart House')
-                        ),
-                        
-                      ],
-                    ),
-                    // Third row
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('2.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Automatic heat detector and Fan '),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('3.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('12VDC to AC Inventor'),
-                        ),
-                      
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('4.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Automatic Water Filling System'),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('5.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('GSM Based Home Security Alarm System'),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('6.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('PiKi'),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('7.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Model Traffic Light'),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('8.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Natural Disasters Knowledge Sharing System'),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('9.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Car Ticket Booking System'),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('10.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Testing and Finding General Knowledge'),
-                        ),
-                        
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('11.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Personal Expense Management System'),
-                        ),
-                       
-                      ],
-                    ),
-                    // Third row
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('12.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Travel Tour And Agency'),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('13.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Our IT and Mobile Shop'),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('14.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('The Famous Places in Myanmar'),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('15.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Hello Cinema'),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('16.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Let\'s Read'),
-                        ),
-                        
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('17.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Motorcycles Installment Selling Center'),
-                        ),
-                        
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('18.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('AR OPNION'),
-                        ),
-                        
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('19.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Online Bus Ticket Reservation System'),
-                        ),
-                        
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('20.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Magway Transporation Bus Service (MTBS)'),
-                        ),
-                        
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('21.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Library Management System'),
-                        ),
-                        
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('22.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Happy Parent Happy Child (HPHC)'),
-                        ),
-                        
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('23.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Online Books Center (OBC)'),
-                        ),
-                        
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('24.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('One More Scholarship System'),
-                        ),
-                        
-                      ],
-                    ),
-                      TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('25.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Analysis of Data in Magway (ADM)'),
-                        ),
-                        
-                      ],
-                    ),
-
-                    
-                    
-                     
+                    // Dynamically generate the rows from the sorted list
+                    ...projectTitles.indexed.map((entry) {
+                      final int index = entry.$1;
+                      final String title = entry.$2;
+                      return TableRow(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('${index + 1}.'),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(title),
+                          ),
+                        ],
+                      );
+                    }).toList(),
                   ],
                 ),
               ),
-              
-              
-              SizedBox(height: 20.0,)
+              const SizedBox(height: 20.0),
             ],
           ),
         ),

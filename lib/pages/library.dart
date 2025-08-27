@@ -34,12 +34,12 @@ class LibraryPage extends StatelessWidget {
   final List<FlSpot> sampleSpots = const [
     FlSpot(0, 17),
     FlSpot(1, 2686),
-    FlSpot(2,254),
-    FlSpot(3,57),
+    FlSpot(2, 254),
+    FlSpot(3, 57),
     FlSpot(4, 27),
     FlSpot(5, 16),
     FlSpot(6, 29),
-     FlSpot(7,113 ),
+    FlSpot(7, 113),
     FlSpot(8, 514),
     FlSpot(9, 2384),
     FlSpot(10, 1094),
@@ -49,10 +49,11 @@ class LibraryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double maxX = sampleSpots.length - 1.0;
-    double maxY = sampleSpots.map((spot) => spot.y).reduce((a, b) => a > b ? a : b) + 200;
+    double maxY =
+        sampleSpots.map((spot) => spot.y).reduce((a, b) => a > b ? a : b) + 200;
 
     return Scaffold(
-     appBar: AppBar(
+      appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 45, 106, 113),
         centerTitle: true,
@@ -64,7 +65,11 @@ class LibraryPage extends StatelessWidget {
               SizedBox(width: 10),
               Text(
                 "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
               SizedBox(width: 10),
               Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
@@ -73,63 +78,58 @@ class LibraryPage extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(14.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
             Container(
-                padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 12,
-                    ),
-                    decoration: BoxDecoration(
-                      color:
-                          Colors.white, // The background color of the container
-                      border: const Border(
-                        // Define the borders for the left, right, and bottom sides
-                        left: BorderSide(color: Colors.blue, width: 2),
-                        right: BorderSide(color: Colors.blue, width: 2),
-                        bottom: BorderSide(color: Colors.blue, width: 2),
-                      ),
-                      borderRadius: BorderRadius.circular(10.0),
-                      boxShadow: [
-                        const BoxShadow(
-                          color: Color.fromARGB(255, 227, 218, 140),
-                          offset: Offset(0, 1),
-                          blurRadius: 8,
-                          spreadRadius: 2,
-                        ),
-                        BoxShadow(
-                          color: Colors.cyan.withOpacity(
-                            0.3,
-                          ), // A semi-transparent purple color
-                          offset: const Offset(
-                            -4,
-                            4,
-                          ), // Shifts the shadow to the bottom-left
-                          blurRadius: 10,
-                          spreadRadius: 0,
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          children: [
-                            const Text(
-                              'စာကြည့်တိုက်ရှိစာအုပ်စာရင်း ',
-                              style: TextStyle(
-                                fontSize: 15,
-                                //fontWeight: FontWeight.bold,
-                                color: Colors.black87,
-                              ),
-                            ),
-                           
-                          ],
-                        ),
-                      ],
-                    ),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              decoration: BoxDecoration(
+                color: Colors.white, // The background color of the container
+                border: const Border(
+                  // Define the borders for the left, right, and bottom sides
+                  left: BorderSide(color: Colors.blue, width: 2),
+                  right: BorderSide(color: Colors.blue, width: 2),
+                  bottom: BorderSide(color: Colors.blue, width: 2),
+                ),
+                borderRadius: BorderRadius.circular(10.0),
+                boxShadow: [
+                  const BoxShadow(
+                    color: Color.fromARGB(255, 227, 218, 140),
+                    offset: Offset(0, 1),
+                    blurRadius: 8,
+                    spreadRadius: 2,
+                  ),
+                  BoxShadow(
+                    color: Colors.cyan.withOpacity(
+                      0.3,
+                    ), // A semi-transparent purple color
+                    offset: const Offset(
+                      -4,
+                      4,
+                    ), // Shifts the shadow to the bottom-left
+                    blurRadius: 10,
+                    spreadRadius: 0,
+                  ),
+                ],
               ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      const Text(
+                        'စာကြည့်တိုက်ရှိစာအုပ်စာရင်း ',
+                        style: TextStyle(
+                          fontSize: 15,
+                          //fontWeight: FontWeight.bold,
+                          color: Colors.black87,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
             const SizedBox(height: 15),
             Expanded(
               child: LineChart(
@@ -157,7 +157,8 @@ class LibraryPage extends StatelessWidget {
                         showTitles: true,
                         reservedSize: 30,
                         getTitlesWidget: (value, meta) {
-                          final String burmeseNumber = _convertToBurmeseNumerals(value);
+                          final String burmeseNumber =
+                              _convertToBurmeseNumerals(value);
                           return Text(
                             burmeseNumber,
                             style: const TextStyle(fontSize: 10),
@@ -195,7 +196,7 @@ class LibraryPage extends StatelessWidget {
                             case 6:
                               label = 'စည်းမျဉ်း/လက်စွဲ';
                               break;
-                              case 7:
+                            case 7:
                               label = ' ဝန်ထမ်းကျင့်ဝတ်';
                               break;
                             case 8:
@@ -210,9 +211,7 @@ class LibraryPage extends StatelessWidget {
                             case 11:
                               label = 'Conference';
                               break;
-                              case 12:
-                              label = 'နှီးနှောဖလှယ်ပွဲ';
-                              break;
+                            
                           }
 
                           return Transform.rotate(
@@ -251,7 +250,8 @@ class LibraryPage extends StatelessWidget {
                       tooltipBgColor: Colors.blueGrey.withOpacity(0.8),
                       getTooltipItems: (List<FlSpot> touchedSpots) {
                         return touchedSpots.map((FlSpot touchedSpot) {
-                          final String burmeseNumber = _convertToBurmeseNumerals(touchedSpot.y);
+                          final String burmeseNumber =
+                              _convertToBurmeseNumerals(touchedSpot.y);
                           return LineTooltipItem(
                             burmeseNumber,
                             const TextStyle(
@@ -262,23 +262,27 @@ class LibraryPage extends StatelessWidget {
                         }).toList();
                       },
                     ),
-                    getTouchedSpotIndicator: (LineChartBarData barData, List<int> spotIndexes) {
-                      return spotIndexes.map((spotIndex) {
-                        return TouchedSpotIndicatorData(
-                          FlLine(color: const Color.fromARGB(255, 45, 106, 113), strokeWidth: 2),
-                          FlDotData(
-                            getDotPainter: (spot, percent, bar, index) {
-                              return FlDotCirclePainter(
-                                radius: 8,
-                                color: Colors.blue,
-                                strokeColor: Colors.white,
+                    getTouchedSpotIndicator:
+                        (LineChartBarData barData, List<int> spotIndexes) {
+                          return spotIndexes.map((spotIndex) {
+                            return TouchedSpotIndicatorData(
+                              FlLine(
+                                color: const Color.fromARGB(255, 45, 106, 113),
                                 strokeWidth: 2,
-                              );
-                            },
-                          ),
-                        );
-                      }).toList();
-                    },
+                              ),
+                              FlDotData(
+                                getDotPainter: (spot, percent, bar, index) {
+                                  return FlDotCirclePainter(
+                                    radius: 8,
+                                    color: Colors.blue,
+                                    strokeColor: Colors.white,
+                                    strokeWidth: 2,
+                                  );
+                                },
+                              ),
+                            );
+                          }).toList();
+                        },
                     handleBuiltInTouches: true,
                   ),
                   lineBarsData: [

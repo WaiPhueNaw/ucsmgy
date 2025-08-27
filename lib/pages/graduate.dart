@@ -37,8 +37,8 @@ class GraduatePage extends StatelessWidget {
       BarChartGroupData(
         x: 0,
         barRods: [
-          BarChartRodData(toY: 85, color: csColor),
-          BarChartRodData(toY: 18, color: ctColor),
+          BarChartRodData(toY: 67, color: csColor),
+          BarChartRodData(toY: 5, color: ctColor),
           BarChartRodData(toY: 0, color: mColor),
           BarChartRodData(toY: 0, color: mmColor),
         ],
@@ -47,15 +47,6 @@ class GraduatePage extends StatelessWidget {
       BarChartGroupData(
         x: 1,
         barRods: [
-          BarChartRodData(toY: 67, color: csColor),
-          BarChartRodData(toY: 5, color: ctColor),
-          BarChartRodData(toY: 0, color: mColor),
-          BarChartRodData(toY: 0, color: mmColor),
-        ],
-      ),
-      BarChartGroupData(
-        x: 2,
-        barRods: [
           BarChartRodData(toY: 70, color: csColor),
           BarChartRodData(toY: 6, color: ctColor),
           BarChartRodData(toY: 4, color: mColor),
@@ -63,7 +54,7 @@ class GraduatePage extends StatelessWidget {
         ],
       ),
       BarChartGroupData(
-        x: 3,
+        x: 2,
         barRods: [
           BarChartRodData(toY: 0, color: csColor),
           BarChartRodData(toY: 0, color: ctColor),
@@ -72,10 +63,19 @@ class GraduatePage extends StatelessWidget {
         ],
       ),
       BarChartGroupData(
-        x: 4,
+        x: 3,
         barRods: [
           BarChartRodData(toY: 12, color: csColor),
           BarChartRodData(toY: 2, color: ctColor),
+          BarChartRodData(toY: 2, color: mColor),
+          BarChartRodData(toY: 0, color: mmColor),
+        ],
+      ),
+      BarChartGroupData(
+        x: 4,
+        barRods: [
+          BarChartRodData(toY: 75, color: csColor),
+          BarChartRodData(toY: 24, color: ctColor),
           BarChartRodData(toY: 0, color: mColor),
           BarChartRodData(toY: 0, color: mmColor),
         ],
@@ -92,19 +92,19 @@ class GraduatePage extends StatelessWidget {
       String text;
       switch (value.toInt()) {
         case 0:
-          text = '၂၀၁၇-၂၀၁၈';
-          break;
-        case 1:
           text = '၂၀၁၈-၂၀၁၉';
           break;
-        case 2:
+        case 1:
           text = '၂၀၁၉-၂၀၂၀';
           break;
-        case 3:
+        case 2:
           text = '၂၀၂၀-၂၀၂၁';
           break;
-        case 4:
+        case 3:
           text = '၂၀၂၁-၂၀၂၂';
+          break;
+        case 4:
+          text = '၂၀၂၃-၂၀၂၄';
           break;
         default:
           text = '';
@@ -130,8 +130,8 @@ class GraduatePage extends StatelessWidget {
           child: Row(
             children: [
               Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
-              SizedBox(width: 10),
-              Text(
+              const SizedBox(width: 10),
+              const Text(
                 "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
                 style: TextStyle(
                   fontSize: 18.0,
@@ -139,7 +139,7 @@ class GraduatePage extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
             ],
           ),
@@ -150,64 +150,55 @@ class GraduatePage extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 8,
+                horizontal: 10,
+                vertical: 8,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: const Border(
+                  left: BorderSide(color: Colors.blue, width: 2),
+                  right: BorderSide(color: Colors.blue, width: 2),
+                  bottom: BorderSide(color: Colors.blue, width: 2),
+                ),
+                borderRadius: BorderRadius.circular(10.0),
+                boxShadow: [
+                  const BoxShadow(
+                    color: Color.fromARGB(255, 227, 218, 140),
+                    offset: Offset(0, 1),
+                    blurRadius: 8,
+                    spreadRadius: 2,
                   ),
-                  decoration: BoxDecoration(
-                    color:
-                        Colors.white, // The background color of the container
-                    border: const Border(
-                      // Define the borders for the left, right, and bottom sides
-                      left: BorderSide(color: Colors.blue, width: 2),
-                      right: BorderSide(color: Colors.blue, width: 2),
-                      bottom: BorderSide(color: Colors.blue, width: 2),
-                    ),
-                    borderRadius: BorderRadius.circular(10.0),
-                    boxShadow: [
-                      const BoxShadow(
-                        color: Color.fromARGB(255, 227, 218, 140),
-                        offset: Offset(0, 1),
-                        blurRadius: 8,
-                        spreadRadius: 2,
-                      ),
-                      BoxShadow(
-                        color: Colors.cyan.withOpacity(
-                          0.3,
-                        ), // A semi-transparent purple color
-                        offset: const Offset(
-                          -4,
-                          4,
-                        ), // Shifts the shadow to the bottom-left
-                        blurRadius: 10,
-                        spreadRadius: 0,
-                      ),
-                    ],
+                  BoxShadow(
+                    color: Colors.cyan.withOpacity(0.3),
+                    offset: const Offset(-4, 4),
+                    blurRadius: 10,
+                    spreadRadius: 0,
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
-                        children: [
-                          const Text(
-                            'ဘာသာရပ်အလိုက်၊ပညာသင်နှစ်အလိုက် ',
-                            style: TextStyle(
-                              fontSize: 14,
-                              //fontWeight: FontWeight.bold,
-                              color: Colors.black87,
-                            ),
-                          ),
-                           const Text(
-                        'မွေးထုတ်အင်အား(၅နှစ်တာ)',
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: const [
+                      Text(
+                        'ဘာသာရပ်အလိုက်၊ပညာသင်နှစ်အလိုက် ',
                         style: TextStyle(
                           fontSize: 14,
-                          //fontWeight: FontWeight.bold,
                           color: Colors.black87,
                         ),
                       ),
-                        ],
+                      Text(
+                        'မွေးထုတ်အင်အား(၅နှစ်တာ)',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.black87,
+                        ),
                       ),
                     ],
                   ),
+                ],
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
@@ -245,15 +236,8 @@ class GraduatePage extends StatelessWidget {
                                   getTooltipItem:
                                       (group, groupIndex, rod, rodIndex) {
                                     final students = rod.toY.toInt();
-                                    final majorNames = [
-                                      'ကွန်ပျူတာသိပ္ပံနှင့်နည်းပညာ',
-                                      'ကွန်ပျူတာသိပ္ပံ',
-                                      'ကွန်ပျူတာနည်းပညာ',
-                                    ];
-                                    final majorName = majorNames[rodIndex];
                                     final burmeseStudents =
                                         _convertNumberToBurmese(students);
-        
                                     return BarTooltipItem(
                                       ' $burmeseStudents',
                                       const TextStyle(
@@ -279,8 +263,7 @@ class GraduatePage extends StatelessWidget {
                                     getTitlesWidget: (value, meta) {
                                       final burmeseNumber =
                                           _convertNumberToBurmese(
-                                        value.toInt(),
-                                      );
+                                              value.toInt());
                                       return Text(
                                         burmeseNumber,
                                         style: const TextStyle(
@@ -325,8 +308,53 @@ class GraduatePage extends StatelessWidget {
                 ),
               ),
             ),
+
+            // Decorated last card
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+              child: Card(
+                elevation: 6,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                color: Colors.blueGrey.shade50,
+                shadowColor: Colors.blueGrey.withOpacity(0.3),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Icon(
+                        Icons.school,
+                        color: Colors.blueAccent,
+                        size: 28,
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Text(
+                          "ကွန်ပျူတာတက္ကသိုလ်(မကွေး) အနေဖြင့် အစိုးရကွန်ပျူတာကောလိပ်အဖြစ် စတင်တည်ထောင်ခဲ့သည့်"
+                          "၂၀၀၀ ခုနှစ်မှစတင်၍ ၂၀၂၅ ခုနှစ်အထိ "
+                          "ကွန်ပျူတာဒီပလိုမာနှင့် ဘွဲ့ရစုစုပေါင်း (၃၁၄၆) "
+                          "မွေးထုတ်ပေးခဲ့ပြီးဖြစ်ပါသည်။",
+                          style: const TextStyle(
+                            fontSize: 14,
+                            color: Colors.black87,
+                            fontWeight: FontWeight.w500,
+                            height: 1.5,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              
+            ),
+            SizedBox(height: 15.0,)
           ],
+          
         ),
+        
       ),
     );
   }

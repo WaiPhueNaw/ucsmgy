@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ucsmgy/pages/category_page.dart';
 import 'package:ucsmgy/pages/course.dart';
+import 'package:ucsmgy/pages/project_show.dart';
 import 'package:ucsmgy/pages/student.dart';
 import 'package:ucsmgy/pages/graduate.dart';
 import 'package:ucsmgy/pages/teacherAnDstaff.dart';
@@ -153,9 +154,9 @@ class _HomePageState extends State<HomePage> {
           onTap: () {
             Navigator.of(
               context,
-            ).push(MaterialPageRoute(builder: (context) => StudentPage()));
+            ).push(MaterialPageRoute(builder: (context) => ProjectShowPage()));
           },
-          child: _buildDeviceCard('ကျောင်းသားအင်အား',Image.asset('assets/img/stud.png',) ),
+          child: _buildDeviceCard('ICT Project Competition & Show',Image.asset('assets/img/pj_show.png',) ),
         ),
         InkWell(
           onTap: () {

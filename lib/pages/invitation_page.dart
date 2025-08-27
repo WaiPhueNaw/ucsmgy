@@ -143,7 +143,7 @@ class _InvitationPageState extends State<InvitationPage> {
                             "ကြွရောက်ချီးမြှင့်ပေးနိုင်ပါရန် လေးစားစွာဖိတ်ကြားအပ်ပါသည်။ ",
                             style: TextStyle(fontSize: 12, color: Colors.white),
                           ),
-                          SizedBox(height: 10.0),
+                          SizedBox(height: 5.0),
                           Image.asset(
                             "assets/img/pp.png",
                             height: 50.0,
@@ -180,100 +180,131 @@ class _InvitationPageState extends State<InvitationPage> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 8.0),
+                          SizedBox(height: 10.0),
                           Row(
-                            // mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Icon(
-                                Icons.calendar_month_outlined,
-                                color: Colors.white,
-                              ),
-                              SizedBox(width: 5.0),
-                              Text(
-                                "နေ့ရက် ",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Image.asset(
-                                "assets/img/arrow.png",
-                                width: 15.0,
-                                height: 15.0,
-                              ),
-                              SizedBox(width: 20.0),
-                              Text(
-                                "၁၃၈၇ ခုနှစ် ၊ တော်သလင်းလဆန်း(၁၃)ရက်",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(width: 20.0),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    // mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.calendar_month_outlined,
+                                        color: Colors.white,
+                                      ),
+                                      //SizedBox(width: 5.0),
+                                      Text(
+                                        " နေ့ရက်",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Image.asset(
+                                        "assets/img/arrow.png",
+                                        width: 15.0,
+                                        height: 15.0,
+                                      ),
+                                      Column(
+                                        children: [
+                                          Text(
+                                            "   ၁၃၈၇ ခုနှစ် ၊ တော်သလင်းလဆန်း(၁၃)ရက်",
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          Text(
+                                            "၄.၉.၂၀၂၅ (ကြာသပတေးနေ့)               ",
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
 
-                              Text(
-                                "၄.၉.၂၀၂၅ (ကြာသပတေးနေ့)",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.white,
-                                ),
+                                  SizedBox(height: 17),
+                                  Row(
+                                    // mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.watch_later_outlined,
+                                        color: Colors.white,
+                                      ),
+
+                                      Text(
+                                        " အခမ်းအနားစတင်ချိန်",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Image.asset(
+                                        "assets/img/arrow.png",
+                                        width: 15.0,
+                                        height: 15.0,
+                                      ),
+                                      Text(
+                                        "   နံနက် ( ၉ : ၃၀) နာရီ ",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 17),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.place_outlined,
+                                        color: Colors.white,
+                                      ),
+                                      //SizedBox(width: 5.0),
+                                      Text(
+                                        " နေရာ",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Image.asset(
+                                        "assets/img/arrow.png",
+                                        width: 15.0,
+                                        height: 15.0,
+                                      ),
+                                      Text(
+                                        "   ကွန်ပျူတာတက္ကသိုလ်(မကွေး) ၊ ဘွဲ့နှင်းသဘင်ခန်းမ",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
+                              
                             ],
                           ),
-                          SizedBox(height: 15.0),
-                          Row(
-                            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Icon(
-                                Icons.watch_later_outlined,
-                                color: Colors.white,
-                              ),
-                              SizedBox(width: 5.0),
-                              Text(
-                                "အခမ်းအနားစတင်ချိန် ",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Image.asset(
-                                "assets/img/arrow.png",
-                                width: 15.0,
-                                height: 15.0,
-                              ),
-                              SizedBox(width: 20.0),
-                              Text(
-                                "နံနက် ( ၉ : ၃၀) နာရီ              ",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 60.0),
+
+
+                          SizedBox(height: 35.0),
                           InkWell(
                             onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return HomePage();
-                          },
-                        ),
-                      );
-                    },
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return HomePage();
+                                  },
+                                ),
+                              );
+                            },
                             child: Container(
                               padding: EdgeInsets.only(
                                 top: 8.0,
@@ -290,7 +321,7 @@ class _InvitationPageState extends State<InvitationPage> {
                                   style: BorderStyle.solid,
                                 ),
                               ),
-                            
+
                               child: Text(
                                 " ပိုမိုသိရှိရန် >>",
                                 style: TextStyle(

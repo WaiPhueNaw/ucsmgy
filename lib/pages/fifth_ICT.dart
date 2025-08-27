@@ -5,8 +5,56 @@ class FifthIctPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Project list grouped and sorted
+    final List<Map<String, String>> projects = [
+      // Second year
+      {'title': 'Automation Hot and Fire Defending system', 'class': 'Second year'},
+      {'title': 'Automation Street Light System', 'class': 'Second year'},
+      {'title': 'Automation Vacuum Cleaner Robot', 'class': 'Second year'},
+      {'title': 'Clap Switch', 'class': 'Second year'},
+      {'title': 'Color Sorting Machine', 'class': 'Second year'},
+      {'title': 'E-Commerce System', 'class': 'Second year'},
+      {'title': 'First Step for Little Learners', 'class': 'Second year'},
+      {'title': 'Let’s Learn about Cyber Security', 'class': 'Second year'},
+      {'title': 'Music Studio', 'class': 'Second year'},
+      {'title': 'Project Competition', 'class': 'Second year'},
+      {'title': 'Smart Car Parking System', 'class': 'Second year'},
+      {'title': 'Smart Garbage Can', 'class': 'Second year'},
+      {'title': 'Student Registration for UCS(Magway)', 'class': 'Second year'},
+      {'title': 'Sun Tracking Solar Panel', 'class': 'Second year'},
+      {'title': 'Task Planner', 'class': 'Second year'},
+      {'title': 'UCSMGY Online Registration', 'class': 'Second year'},
+
+      // Third year
+      {'title': 'Bluetooth Fire Fighting Car', 'class': 'Third year'},
+      {'title': 'Learning Management System', 'class': 'Third year'},
+      {'title': 'Pre-School Students’ Improvement Evaluation System', 'class': 'Third year'},
+      {'title': 'Smart Home', 'class': 'Third year'},
+
+      // Fourth year
+      {'title': 'Balanced Life', 'class': 'Fourth year'},
+      {'title': 'Beauty Salon Appointment System', 'class': 'Fourth year'},
+      {'title': 'Bus Ticket Booking System', 'class': 'Fourth year'},
+      {'title': 'Local Online Market System', 'class': 'Fourth year'},
+      {'title': 'Liquid Dispenser', 'class': 'Fourth year'},
+      {'title': 'Automatic Recycle Machine', 'class': 'Fourth year'},
+      {'title': 'Online Indoor Plant Selling System', 'class': 'Fourth year'},
+      {'title': 'Self-Care Information & Suggestion System', 'class': 'Fourth year'},
+      {'title': 'Smart Restaurant', 'class': 'Fourth year'},
+      {'title': 'Social Media Platform', 'class': 'Fourth year'},
+      {'title': 'မွေးစာရင်း မှတ်ပုံတင်ခြင်းစနစ် Birth Certificate System', 'class': 'Fourth year'},
+    ];
+
+    // Sort by class order then alphabetically
+    final List<String> yearOrder = ['Second year', 'Third year', 'Fourth year'];
+    projects.sort((a, b) {
+      int yearCompare = yearOrder.indexOf(a['class']!).compareTo(yearOrder.indexOf(b['class']!));
+      if (yearCompare != 0) return yearCompare;
+      return a['title']!.toLowerCase().compareTo(b['title']!.toLowerCase());
+    });
+
     return Scaffold(
-       appBar: AppBar(
+      appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 45, 106, 113),
         centerTitle: true,
@@ -15,216 +63,34 @@ class FifthIctPage extends StatelessWidget {
           child: Row(
             children: [
               Image.asset("assets/img/thapana_logo.png", height: 40, width: 40),
-              SizedBox(width: 10),
-              Text(
+              const SizedBox(width: 10),
+              const Text(
                 "ကွန်ပျူတာတက္ကသိုလ်(မကွေး)",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(
+                    fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white),
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               Image.asset("assets/img/uni_logo.png", height: 40, width: 40),
             ],
           ),
         ),
       ),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              // Padding(
-              //   padding: const EdgeInsets.symmetric(
-              //       horizontal: 10,
-              //       vertical: 12,
-              //     ),
-              //   child: Container(
-              //     padding: const EdgeInsets.symmetric(
-              //       horizontal: 10,
-              //       vertical: 12,
-              //     ),
-              //     decoration: BoxDecoration(
-              //       color:
-              //           Colors.white, // The background color of the container
-              //       border: const Border(
-              //         // Define the borders for the left, right, and bottom sides
-              //         left: BorderSide(color: Colors.blue, width: 2),
-              //         right: BorderSide(color: Colors.blue, width: 2),
-              //         bottom: BorderSide(color: Colors.blue, width: 2),
-              //       ),
-              //       borderRadius: BorderRadius.circular(10.0),
-              //       boxShadow: [
-              //         const BoxShadow(
-              //           color: Color.fromARGB(255, 227, 218, 140),
-              //           offset: Offset(0, 1),
-              //           blurRadius: 8,
-              //           spreadRadius: 2,
-              //         ),
-              //         BoxShadow(
-              //           color: Colors.cyan.withOpacity(
-              //             0.3,
-              //           ), // A semi-transparent purple color
-              //           offset: const Offset(
-              //             -4,
-              //             4,
-              //           ), // Shifts the shadow to the bottom-left
-              //           blurRadius: 10,
-              //           spreadRadius: 0,
-              //         ),
-              //       ],
-              //     ),
-              //     child: Row(
-              //       mainAxisAlignment: MainAxisAlignment.center,
-              //       children: [
-              //         Column(
-              //           children: [
-              //             const Text(
-              //               'Project Show',
-              //               style: TextStyle(
-              //                 fontSize: 17,
-              //                 //fontWeight: FontWeight.bold,
-              //                 color: Colors.black87,
-              //               ),
-              //             ),
-              //             const Text(
-              //           '(4)',
-              //           style: TextStyle(
-              //             fontSize: 17,
-              //             //fontWeight: FontWeight.bold,
-              //             color: Colors.cyan,
-              //           ),
-              //         ),
-              //           ],
-              //         ),
-                      
-              //       ],
-              //     ),
-              //   ),
-              // ),
-              // Card(
-              //   child: Table(
-              //     columnWidths: <int, TableColumnWidth>{
-              //     0: FlexColumnWidth(0.5), // First column takes 1 part of the flexible space
-              //     1: FlexColumnWidth(2),
-              //     2: FlexColumnWidth(1) // Second column takes 1 part of the flexible space
-              //   },
-              //   border: TableBorder(
-              //     bottom: BorderSide(color: Colors.cyan, width: 1.0),
-              //       verticalInside: BorderSide(color: Colors.blue, width: 1.0),
-              //       horizontalInside: BorderSide(
-              //         color: Colors.green,
-              //         width: 1.0,
-              //       ),
-              //   ),
-              //   children: [
-              //     TableRow(
-              //         children: [
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text(
-              //               'No.',
-              //               style: TextStyle(fontWeight: FontWeight.bold),
-              //             ),
-              //           ),
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text(
-              //               'Project Title',
-              //               style: TextStyle(fontWeight: FontWeight.bold),
-              //             ),
-              //           ),
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text(
-              //               'Class',
-              //               style: TextStyle(fontWeight: FontWeight.bold),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //       TableRow(
-              //         children: [
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('1.'),
-              //           ),
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('Advanced Mushroom Cultivation'),
-              //           ),
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('Final year'),
-              //           ),
-              //         ],
-              //       ),
-              //       TableRow(
-              //         children: [
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('2.'),
-              //           ),
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('Automatic Floor Cleaning Robot'),
-              //           ),
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('Final year'),
-              //           ),
-              //         ],
-              //       ),
-              //       TableRow(
-              //         children: [
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('3.'),
-              //           ),
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('Smart Campus Infrastructure'),
-              //           ),
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('Final year'),
-              //           ),
-              //         ],
-              //       ),
-              //       TableRow(
-              //         children: [
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('4.'),
-              //           ),
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('RFID Based Library Management Systems'),
-              //           ),
-              //           Padding(
-              //             padding: EdgeInsets.all(8.0),
-              //             child: Text('Final year'),
-              //           ),
-              //         ],
-              //       ),
-              //   ],
-
-              //   ),
-              // ),
-              Padding(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+             Padding(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 20,
-                  ),
+                  horizontal: 10,
+                  vertical: 20,
+                ),
                 child: Container(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 10,
                     vertical: 12,
                   ),
                   decoration: BoxDecoration(
-                    color:
-                        Colors.white, // The background color of the container
+                    color: Colors.white,
                     border: const Border(
-                      // Define the borders for the left, right, and bottom sides
                       left: BorderSide(color: Colors.blue, width: 2),
                       right: BorderSide(color: Colors.blue, width: 2),
                       bottom: BorderSide(color: Colors.blue, width: 2),
@@ -238,13 +104,8 @@ class FifthIctPage extends StatelessWidget {
                         spreadRadius: 2,
                       ),
                       BoxShadow(
-                        color: Colors.cyan.withOpacity(
-                          0.3,
-                        ), // A semi-transparent purple color
-                        offset: const Offset(
-                          -4,
-                          4,
-                        ), // Shifts the shadow to the bottom-left
+                        color: Colors.cyan.withOpacity(0.3),
+                        offset: const Offset(-4, 4),
                         blurRadius: 10,
                         spreadRadius: 0,
                       ),
@@ -259,562 +120,67 @@ class FifthIctPage extends StatelessWidget {
                             'Project Competition',
                             style: TextStyle(
                               fontSize: 17,
-                              //fontWeight: FontWeight.bold,
                               color: Colors.black87,
                             ),
                           ),
-                           const Text(
-                        '(30)',
-                        style: TextStyle(
-                          fontSize: 17,
-                          //fontWeight: FontWeight.bold,
-                          color: Colors.cyan,
-                        ),
-                      ),
+                          Text(
+                            '(${projects.length})', // Dynamically show the count
+                            style: const TextStyle(
+                              fontSize: 17,
+                              color: Colors.cyan,
+                            ),
+                          ),
                         ],
                       ),
                     ],
                   ),
                 ),
               ),
-              //SizedBox(height: 10.0),
-              Card(
-                child: Table(
-                  columnWidths: <int, TableColumnWidth>{
-                  0: FlexColumnWidth(0.5), // First column takes 1 part of the flexible space
+            Card(
+              child: Table(
+                columnWidths: const <int, TableColumnWidth>{
+                  0: FlexColumnWidth(0.5),
                   1: FlexColumnWidth(2),
-                  2: FlexColumnWidth(1) // Second column takes 1 part of the flexible space
+                  2: FlexColumnWidth(1),
                 },
-                  // Sets the border for each cell
-                  border: TableBorder(
-                    //top: BorderSide(color: Colors.red, width: 2.0),
-                    bottom: BorderSide(color: Colors.cyan, width: 1.0),
-                    verticalInside: BorderSide(color: Colors.blue, width: 1.0),
-                    horizontalInside: BorderSide(
-                      color: Colors.green,
-                      width: 1.0,
-                    ),
-                  ),
-                  children: const [
-                    // First row
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text(
-                            'No.',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text(
-                            'Project Title',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text(
-                            'Class',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-                    ),
-                    // Second row
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('1.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Smart Garbage Can'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                    // Third row
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('2.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Smart Car Parking System'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('3.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Color Sorting Machine'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('4.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Automation Vacuum Cleaner Robot'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('5.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Clap Switch'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('6.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Automation Hot and Fire Defending system'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('7.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Sun Tracking Solar Panel'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('8.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Automation Street Light System'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('9.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Bluetooth Fire Fighting Car'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Third year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('10.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Smart Home'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Third year'),
-                        ),
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('11.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Automatic Recycle Machine'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Fourth year'),
-                        ),
-                      ],
-                    ),
-                    // Third row
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('12.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Liquid Dispenser'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Fourth year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('13.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('E-Commerce System'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('14.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('First Step for Little Learners'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('15.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Student Registration for UCS(Magway)'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('16.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Let’s Learn about Cyber Security'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('17.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Music Studio'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('18.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('UCSMGY Online Registration'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('19.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Task Planner'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Second year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('20.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Pre-School Students’ Improvement Evaluation System'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Third year'),
-                        ),
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('21.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Learning Management System'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Third year'),
-                        ),
-                      ],
-                    ),
-                        TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('22.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Social Media Platform'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Fourth year'),
-                        ),
-                      ],
-                    ),
-                    // Third row
-                    TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('23.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('မွေးစာရင်း မှတ်ပုံတင်ခြင်းစနစ် Birth Certificate System'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Fourth year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('24.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Self-Care Information & Suggestion System'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Fourth year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('25.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Balanced Life'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Fourth year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('26.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Smart Restaurant'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Fourth year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('27.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Online Indoor Plant Selling System'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Fourth year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('28.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Bus Ticket Booking System'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Fourth year'),
-                        ),
-                      ],
-                    ),
-                 
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('29.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Beauty Salon Appointment System'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Fourth year'),
-                        ),
-                      ],
-                    ),
-                     TableRow(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('30.'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Local Online Market System'),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Fourth year'),
-                        ),
-                      ],
-                    ),
-                  ],
+                border: const TableBorder(
+                  bottom: BorderSide(color: Colors.cyan, width: 1.0),
+                  verticalInside: BorderSide(color: Colors.blue, width: 1.0),
+                  horizontalInside: BorderSide(color: Colors.green, width: 1.0),
                 ),
+                children: [
+                  const TableRow(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('No.', style: TextStyle(fontWeight: FontWeight.bold)),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Project Title', style: TextStyle(fontWeight: FontWeight.bold)),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Class', style: TextStyle(fontWeight: FontWeight.bold)),
+                      ),
+                    ],
+                  ),
+                  ...projects.asMap().entries.map((entry) {
+                    final index = entry.key + 1;
+                    final p = entry.value;
+                    return TableRow(
+                      children: [
+                        Padding(padding: const EdgeInsets.all(8.0), child: Text('$index.')),
+                        Padding(padding: const EdgeInsets.all(8.0), child: Text(p['title']!)),
+                        Padding(padding: const EdgeInsets.all(8.0), child: Text(p['class']!)),
+                      ],
+                    );
+                  }),
+                ],
               ),
-              
-              
-              SizedBox(height: 20.0,)
-            ],
-          ),
+            ),
+            const SizedBox(height: 20.0),
+          ],
         ),
       ),
     );
