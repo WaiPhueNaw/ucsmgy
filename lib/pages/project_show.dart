@@ -52,6 +52,8 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                   );
                 },
                 child: Card(
+                  elevation: 3,
+                  shadowColor: Colors.cyan,
                   child: Row(
                     children: [
                       Padding(
@@ -60,6 +62,8 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                           "assets/img/fffirst.jpg",
                           height: 100,
                           width: 100,
+                          color: Color(0xFFFFD700).withOpacity(0.6),
+                          colorBlendMode: BlendMode.color,
                         ),
                       ),
                       //SizedBox(width: 10.0),
@@ -68,6 +72,14 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                         child: Column(
                           children: [
                             Text("ICT Project Competition & Show"),
+                            Text(
+                              "(12.9.2018)",
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.black87,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             Row(
                               children: [
                                 Text(
@@ -128,7 +140,6 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                   ),
                 ),
               ),
-
               InkWell(
                 onTap: () {
                   Navigator.of(context).push(
@@ -138,6 +149,8 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                   );
                 },
                 child: Card(
+                  elevation: 3,
+                  shadowColor: Colors.cyan,
                   child: Row(
                     children: [
                       Padding(
@@ -146,6 +159,8 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                           "assets/img/second.jpg",
                           height: 100,
                           width: 100,
+                          color: Color(0xFFFFD700).withOpacity(0.6),
+                          colorBlendMode: BlendMode.color,
                         ),
                       ),
                       //SizedBox(width: 10.0),
@@ -154,6 +169,14 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                         child: Column(
                           children: [
                             Text("ICT Project Competition & Show"),
+                            Text(
+                              "(3.9.2019)",
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.black87,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             Row(
                               children: [
                                 Text(
@@ -223,6 +246,8 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                   );
                 },
                 child: Card(
+                  elevation: 3,
+                  shadowColor: Colors.cyan,
                   child: Row(
                     children: [
                       Padding(
@@ -231,6 +256,8 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                           "assets/img/tthird.jpg",
                           height: 100,
                           width: 100,
+                          color: Color(0xFFFFD700).withOpacity(0.6),
+                          colorBlendMode: BlendMode.color,
                         ),
                       ),
                       //SizedBox(width: 10.0),
@@ -239,6 +266,14 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                         child: Column(
                           children: [
                             Text("ICT Project Competition & Show"),
+                            Text(
+                              "(7.9.2020)",
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.black87,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             Row(
                               children: [
                                 Text(
@@ -308,6 +343,8 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                   );
                 },
                 child: Card(
+                  elevation: 3,
+                  shadowColor: Colors.cyan,
                   child: Row(
                     children: [
                       Padding(
@@ -316,6 +353,8 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                           "assets/img/fourth_bigger.jpg",
                           height: 100,
                           width: 100,
+                          color: Color(0xFFFFD700).withOpacity(0.6),
+                          colorBlendMode: BlendMode.color,
                         ),
                       ),
                       //SizedBox(width: 10.0),
@@ -324,6 +363,14 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                         child: Column(
                           children: [
                             Text("ICT Project Competition & Show"),
+                            Text(
+                              "(5.9.2023)",
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.black87,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             Row(
                               children: [
                                 Text(
@@ -393,6 +440,8 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                   );
                 },
                 child: Card(
+                  elevation: 3,
+                  shadowColor: Colors.cyan,
                   child: Row(
                     children: [
                       Padding(
@@ -401,6 +450,8 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                           "assets/img/ffith.jpg",
                           height: 100,
                           width: 100,
+                          color: Color(0xFFFFD700).withOpacity(0.6),
+                          colorBlendMode: BlendMode.color,
                         ),
                       ),
                       //SizedBox(width: 10.0),
@@ -409,6 +460,14 @@ class _ProjectShowPageState extends State<ProjectShowPage> {
                         child: Column(
                           children: [
                             Text("ICT Project Competition & Show"),
+                            Text(
+                              "(6.9.2024)",
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.black87,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             Row(
                               children: [
                                 Text(
